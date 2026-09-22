@@ -41,8 +41,7 @@ Outcome - Win: - The player reaches the exit and escapes the facility. - Lose: -
 I. CORE GAMEPLAY LOOP
 
 4.1 Core Loop Diagram
-
-
+<img width="512" height="500" alt="image" src="https://github.com/user-attachments/assets/b72d6cad-365f-4cb3-8ee7-4041b36816f3" />
 
 Figure 1. Core Loop Diagram
 
