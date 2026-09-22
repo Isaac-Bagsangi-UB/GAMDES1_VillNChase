@@ -3,52 +3,36 @@
 Vill n’ Chase: Chasing Time is not just any 2d platformer escape game, as the game combines silliness with a heart-pounding time limit and gear-turning problems. Players play as “Villie the Villain” who shall use their wits and skill to move around Villain in Prison (VIP) Facility, avoiding traps, using items and mechanisms, and dealing with those who try to stop their escape.
 
 ## I. FORMAL ELEMENTS
+Players - The game is played by a single player who will play as Villie with enemy movements programmed.
 
-. FORMAL ELEMENTS
-Players	The game is played by a single player who will play
-	as Villie with enemy movements programmed.
-Objectives	Escape the facility by reaching the exit before
-	time runs out.
-	Escape with at least a heart remaining
-	There may be more objectives as difficulty
-	increases
-Rules	The player can only carry one item at a time.
-	Locked doors can only be used when unlocked with
-	a key or mechanism
-Procedures	Choose a map and a difficulty
-	Move and explore, find and use items, interact
-	with mechanisms, avoid or deal with enemies and
-	traps, find the exit
-	Unlock the exit and Escape
-Resources	Items such as Potions, Weapons, Repair Tools,
-	Keys
-	Hearts
-	Time remaining before the game ends
-Conflict	Heroes and other villains can damage the player
-	or cast abilities
-	Traps can damage, stun, or slow.
-	The player should reach the exit before time
-	runs out.
-Boundaries	The game takes place within the facility selected by
-	the player. The game is played on a desktop using
-	keyboard controls.
+Objectives - Escape the facility by reaching the exit before time runs out.
+		   - Escape with at least a heart remaining
+		   - There may be more objectives as difficulty increases
+		   
+Rules - The player can only carry one item at a time.
+	  - Locked doors can only be used when unlocked with a key or mechanism
+	  
+Procedures - Choose a map and a difficulty
+		   - Move and explore, find and use items, interact with mechanisms, avoid or deal with enemies and traps, find the exit
+	       - Unlock the exit and Escape
+		   
+Resources - Items such as Potions, Weapons, Repair Tools, Keys
+		  - Hearts
+		  - Time remaining before the game ends
+		  
+Conflict - Heroes and other villains can damage the player or cast abilities
+		 - Traps can damage, stun, or slow.
+	     - The player should reach the exit before time runs out.
+		 
+Boundaries - The game takes place within the facility selected by the player. The game is played on a desktop using keyboard controls.
 
 
-Outcome	Win:
-	The player reaches the exit and escapes the facility.
-	Lose:
-	The player fails to escape before the time limit.
-	The player fails to accomplish the additional challenges
-	The player loses hearts
-
-
-| Outcome | Win: |
-| --- | --- |
-|   | The player reaches the exit and escapes the facility. |
-|   | Lose: |
-|   | The player fails to escape before the time limit. |
-|   | The player fails to accomplish the additional challenges |
-|   | The player loses hearts |
+Outcome - Win:
+			- The player reaches the exit and escapes the facility.
+		- Lose:
+			- The player fails to escape before the time limit.
+			- The player fails to accomplish the additional challenges
+			- The player loses hearts
 
 ## I. CORE GAMEPLAY LOOP
 
@@ -72,27 +56,17 @@ One complete pass through the core gameplay loop is expected to take approximate
 
 ## 4.3 Macro and Micro Loops
 
-| Micro loop Move around the facility → avoid enemies and traps |   |   |
-| --- | --- | --- |
-| → find or use item/s → interact with | mechanisms | → |
-| continue toward the exit. |   |   |
-| Macro loop Choose a map and difficulty → start the game → |   |   |
-| explore the facility → deal with enemies, traps, |   |   |
-| and obstacles → manage items and time → find and |   |   |
-| reach the exit → escape or lose. |   |   |
-| Relationship The player repeats the micro loop while exploring |   |   |
-| between them the facility. Completing these small actions helps |   |   |
-| the player move through the facility, overcome |   |   |
-| obstacles, and get closer to the exit. Repeating |   |   |
-| the micro loop eventually leads to completing the |   |   |
-| macro loop by reaching the exit and escaping. |   |   |
+Micro loop - Move around the facility → avoid enemies and traps	→ find or use item/s → interact with mechanisms	→ continue toward the exit.
+
+Macro loop - Choose a map and difficulty → start the game →	explore the facility → deal with enemies, traps, and obstacles → manage items and time → find and reach the exit → escape or lose.		
+
+Relationship between them - The player repeats the micro loop while exploring the facility. Completing these small actions helpsthe player move through the facility, overcome	obstacles, and get closer to the exit. Repeating the micro loop eventually leads to completing the macro loop by reaching the exit and escaping.		
+
 
 ## 4.4 In-Game and Out-Game Actions
 
-| In-game actions | Move left and right, jump, enter doors, pick up |
-| --- | --- |
-|   | and use items, interact with mechanisms in the |
-|   | facility, avoid enemies and traps, use weapons on |
-|   | enemies, and find the exit. |
-| Out-game | Choose a map, choose or customize the difficulty, |
-| actions | start a game, or play again after the game ends. |
+In-game actions - Move left and right, jump, enter doors, pick up and use items, interact with mechanisms in the facility, avoid enemies and traps, use weapons on enemies,  and find the exit.
+
+Out-game actions - Choose a map, choose or customize the difficulty, start a game, or play again after the game ends. 
+
+
