@@ -4,9 +4,7 @@ Vill n’ Chase: Chasing Time is not just any 2d platformer escape game, as the 
 
 ## I. FORMAL ELEMENTS
 
-| Players | The game is played by a single player who will play |
-| --- | --- |
-|   | as Villie with enemy movements programmed. |
+| Players | The game is played by a single player who will play as Villie with enemy movements programmed. |
 | Objectives | Escape the facility by reaching the exit before |
 |   | time runs out. |
 |   | Escape with at least a heart remaining |
