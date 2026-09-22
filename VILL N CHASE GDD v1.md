@@ -45,8 +45,7 @@ Vill n’ Chase: Chasing Time is not just any 2d platformer escape game, as the 
 ## I. CORE GAMEPLAY LOOP
 
 ## 4.1 Core Loop Diagram
-
-
+<img width="512" height="500" alt="image" src="https://github.com/user-attachments/assets/a5d057b5-8e30-458a-8ce3-4d93baa5ded4" />
 Figure 1. Core Loop Diagram
 
 
