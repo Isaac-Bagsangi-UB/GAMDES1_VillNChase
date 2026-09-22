@@ -4,32 +4,42 @@ Vill n’ Chase: Chasing Time is not just any 2d platformer escape game, as the 
 
 ## I. FORMAL ELEMENTS
 
-| Players | The game is played by a single player who will play as Villie with enemy movements programmed. |
-| Objectives | Escape the facility by reaching the exit before |
-|   | time runs out. |
-|   | Escape with at least a heart remaining |
-|   | There may be more objectives as difficulty |
-|   | increases |
-| Rules | The player can only carry one item at a time. |
-|   | Locked doors can only be used when unlocked with |
-|   | a key or mechanism |
-| Procedures | Choose a map and a difficulty |
-|   | Move and explore, find and use items, interact |
-|   | with mechanisms, avoid or deal with enemies and |
-|   | traps, find the exit |
-|   | Unlock the exit and Escape |
-| Resources | Items such as Potions, Weapons, Repair Tools, |
-|   | Keys |
-|   | Hearts |
-|   | Time remaining before the game ends |
-| Conflict | Heroes and other villains can damage the player |
-|   | or cast abilities |
-|   | Traps can damage, stun, or slow. |
-|   | The player should reach the exit before time |
-|   | runs out. |
-| Boundaries | The game takes place within the facility selected by |
-|   | the player. The game is played on a desktop using |
-|   | keyboard controls. |
+. FORMAL ELEMENTS
+Players	The game is played by a single player who will play
+	as Villie with enemy movements programmed.
+Objectives	Escape the facility by reaching the exit before
+	time runs out.
+	Escape with at least a heart remaining
+	There may be more objectives as difficulty
+	increases
+Rules	The player can only carry one item at a time.
+	Locked doors can only be used when unlocked with
+	a key or mechanism
+Procedures	Choose a map and a difficulty
+	Move and explore, find and use items, interact
+	with mechanisms, avoid or deal with enemies and
+	traps, find the exit
+	Unlock the exit and Escape
+Resources	Items such as Potions, Weapons, Repair Tools,
+	Keys
+	Hearts
+	Time remaining before the game ends
+Conflict	Heroes and other villains can damage the player
+	or cast abilities
+	Traps can damage, stun, or slow.
+	The player should reach the exit before time
+	runs out.
+Boundaries	The game takes place within the facility selected by
+	the player. The game is played on a desktop using
+	keyboard controls.
+
+
+Outcome	Win:
+	The player reaches the exit and escapes the facility.
+	Lose:
+	The player fails to escape before the time limit.
+	The player fails to accomplish the additional challenges
+	The player loses hearts
 
 
 | Outcome | Win: |
