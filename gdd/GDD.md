@@ -34,7 +34,12 @@ Boundaries - The game takes place within the facility selected by the player. Th
 
 
 
-Outcome - Win: - The player reaches the exit and escapes the facility. - Lose: - The player fails to escape before the time limit. - The player fails to accomplish the additional challenges - The player loses hearts
+Outcome - Win: 
+            - The player reaches the exit and escapes the facility. 
+        - Lose: 
+            - The player fails to escape before the time limit. 
+            - The player fails to accomplish the additional challenges 
+            - The player loses hearts
 
 
 
