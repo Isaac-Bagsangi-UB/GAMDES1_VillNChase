@@ -1,0 +1,41 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1791872605
+camera_2d.gd::GDScript::7923658833415581223::1791872047::0::1::::<>Camera2D<><>0<>0<><>::
+door.png::CompressedTexture2D::4570603715872549426::1791872047::1791872047::1::::<><><>0<>0<>512228461956441c84411f005bf89aa5<>res://.godot/imported/door.png-4ad4ab0c545155655bbef277d86eb152.ctex::
+door.tscn::PackedScene::5873394330829984456::1791872047::0::1::::<><><>0<>0<><>::uid://rjvk45doqw4e::::res://Assets/Final/Salt.png<>uid://ji4nyojbwwbd::::res://door.gd
+doors.tscn::PackedScene::696865157210017788::1791872047::0::1::::<><><>0<>0<><>::uid://bll5au5qi4mx7::::res://door_1.gd<>uid://b6ebf718h2jbe::::res://door.png
+door_1.gd::GDScript::3183028726339056070::1791872047::0::1::::<>Area2D<><>0<>0<><>::
+door_2.gd::GDScript::7853296250346708513::1791872047::0::1::::<>Area2D<><>0<>0<><>::
+facility.jpg::CompressedTexture2D::1958434322131976305::1791872048::1791872048::1::::<><><>0<>0<>f9d6d925bb12b4542b907160e04f8d99<>res://.godot/imported/facility.jpg-241121f04d3eb968225af81099ccb37f.ctex::
+fatspike.tscn::PackedScene::5945389812647017953::1791872048::0::1::::<><><>0<>0<><>::uid://cvfmiocowm0nk::::res://spike.gd<>uid://46fyjnep2x1t::::res://spikes.png
+grass.png::CompressedTexture2D::8271135329027512973::1791872048::1791872048::1::::<><><>0<>0<>b7b7bdaf9dfc177f3c38a84e03554c04<>res://.godot/imported/grass.png-79cf597cc1adecdff9d12adae9606f9b.ctex::
+icon.svg::CompressedTexture2D::271845932648382669::1791872048::1791872048::1::::<><><>0<>0<>c6ec61eff0e66839f2f65e075bdc7328<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+Leveltest with sprites.tscn::PackedScene::5452100938716579957::1791872048::0::1::::<><><>0<>0<><>::uid://25xek8xmyqtl::::res://facility.jpg<>uid://iw4o3j1f4rb5::::res://player.tscn<>uid://bw2jedtx3wp6p::::res://Assets/Final/Tiles.png<>uid://j6tjda8lbg5q::::res://doors.tscn
+Leveltestr.tscn::PackedScene::347048521741335580::1791872048::0::1::::<><><>0<>0<><>::uid://bw2jedtx3wp6p::::res://Assets/Final/Tiles.png<>uid://iw4o3j1f4rb5::::res://player.tscn<>uid://cih6d5w2od1ly::::res://main.tscn
+main.tscn::PackedScene::5350691955858169678::1791872048::0::1::::<><><>0<>0<><>::uid://46fyjnep2x1t::::res://spikes.png<>uid://cvfmiocowm0nk::::res://spike.gd
+player.gd::GDScript::7557819927394577647::1791872048::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::608714339344676156::1791872048::0::1::::<><><>0<>0<><>::uid://dfxcgpvqk8c5d::::res://player.gd<>uid://jft4s3fhlcrb::::res://vill stand.png<>uid://leydlrrw8ig7::::res://vill run.png
+spike.gd::GDScript::6257872601902124968::1791872048::0::1::::<>Area2D<><>0<>0<><>::
+spike.tscn::PackedScene::2045567525574419036::1791872048::0::1::::<><><>0<>0<><>::uid://cvfmiocowm0nk::::res://spike.gd<>uid://46fyjnep2x1t::::res://spikes.png
+spikes.png::CompressedTexture2D::2099819112891826155::1791872048::1791872048::1::::<><><>0<>0<>dfcfedcd9fba9227fcbcac4380333444<>res://.godot/imported/spikes.png-4a2427e7b6483a335646e762227cfd31.ctex::
+vill run.png::CompressedTexture2D::781797961064339924::1791872048::1791872048::1::::<><><>0<>0<>c79c1a5a966ffa123a31bbe3f0cedd64<>res://.godot/imported/vill run.png-3d2bebc05049dfb516e2cb204b804f99.ctex::
+vill stand.png::CompressedTexture2D::643227881310188083::1791872048::1791872048::1::::<><><>0<>0<>7c59e53f5a5cf6bceb8523155abdbe19<>res://.godot/imported/vill stand.png-27fbf3d536f385033d4756bcde015efc.ctex::
+::res://Assets/::1791872056
+::res://Assets/Final/::1791872056
+Background_0.png::CompressedTexture2D::5817200887183305136::1791872056::1791872056::1::::<><><>0<>0<>db997cb4dc0c750b7827438cf1c9f892<>res://.godot/imported/Background_0.png-0a94f121bb44bc80ed7e6832a61ddddb.ctex::
+Background_1.png::CompressedTexture2D::1513855462424019497::1791872056::1791872056::1::::<><><>0<>0<>82d392f67008a9103a1fb7d3f2b4c898<>res://.godot/imported/Background_1.png-9b68289cbce0eed0482b3c7869434713.ctex::
+brush.png::CompressedTexture2D::4427284514704764029::1791872056::1791872056::1::::<><><>0<>0<>edf9dbd91da17236f5e82aa8fb15947f<>res://.godot/imported/brush.png-9f5ac57c231f19476f281010aa51417b.ctex::
+Grass_background_1.png::CompressedTexture2D::8087671172782873910::1791872056::1791872056::1::::<><><>0<>0<>ffe1f5a8115cd968a86b447cc92a3ae4<>res://.godot/imported/Grass_background_1.png-4dfcd6cb916be0f208ea1f9580222028.ctex::
+Grass_background_2.png::CompressedTexture2D::8288771941345693736::1791872056::1791872056::1::::<><><>0<>0<>d0fe9da9113f29df90fb839af4e04a40<>res://.godot/imported/Grass_background_2.png-2f81077323af42187630701d47cc9b3b.ctex::
+pixilart-sprite.png::CompressedTexture2D::8482817457100332102::1791872056::1791872056::1::::<><><>0<>0<>4e601874deb500d4322990f37b7d0ee2<>res://.godot/imported/pixilart-sprite.png-5c3e0b60901bff3f349057e2f0c715a8.ctex::
+Salt.png::CompressedTexture2D::1213084226097190134::1791872056::1791872056::1::::<><><>0<>0<>4fd5a7df7b92534a9a4ab4fc0f97d140<>res://.godot/imported/Salt.png-4fcca664866c89bd5622466ee2bcbc0a.ctex::
+Tiles.png::CompressedTexture2D::3986867227204594809::1791872056::1791872056::1::::<><><>0<>0<>1abbce89827a2c0f135a441c0fb9e50b<>res://.godot/imported/Tiles.png-6c00001a78971f2d5e6b62bcd2a07c61.ctex::
+::res://Assets/Final/Social/::1791872056
+Autor_note.txt::TextFile::-1::1791872056::0::1::::<><><>0<>0<><>::
+moon.png::CompressedTexture2D::7882071746409720414::1791872056::1791872056::1::::<><><>0<>0<>1d6a4b615bdac6bf14a7a530cdd8d921<>res://.godot/imported/moon.png-b4c2a1371ed3e601e262cdfd382ff994.ctex::
+test_1.png::CompressedTexture2D::7260993188373275733::1791872056::1791872056::1::::<><><>0<>0<>6480140abe30238384f9a418ffe6f43b<>res://.godot/imported/test_1.png-9c35b522bb37bbd019747ef214b9d787.ctex::
+test_2.png::CompressedTexture2D::836371586801346309::1791872056::1791872056::1::::<><><>0<>0<>f277f52d061645c10ce304905128c5b3<>res://.godot/imported/test_2.png-35455a2e9057f7892ec5457e383a082d.ctex::
+::res://docs/::1791872057
+SCREENSHOT.png::CompressedTexture2D::8940963367934360541::1791872057::1791872057::1::::<><><>0<>0<>fdd43ae8ec50bb331471afecfcbc2b81<>res://.godot/imported/SCREENSHOT.png-3b2753ce56820ce96db6e176762091ed.ctex::
+::res://gdd/::1791872057
+GDD.md::TextFile::-1::1791872057::0::1::::<><><>0<>0<><>::
