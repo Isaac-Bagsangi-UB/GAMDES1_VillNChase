@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://j6tjda8lbg5q"]
+
+[ext_resource type="Script" uid="uid://bll5au5qi4mx7" path="res://door_1.gd" id="1_4ybfh"]
+[ext_resource type="Texture2D" uid="uid://b6ebf718h2jbe" path="res://door.png" id="2_4ybfh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc7sy"]
+size = Vector2(48.25, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(48, 75.5)
+
+[node name="Doors" type="Node2D" unique_id=1017958364]
+
+[node name="door2" type="Area2D" parent="." unique_id=901524144 node_paths=PackedStringArray("target_door")]
+position = Vector2(-113, -74)
+script = ExtResource("1_4ybfh")
+target_door = NodePath("../door1")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="door2" unique_id=2019180576]
+position = Vector2(-1.0000081, 1)
+scale = Vector2(0.20000002, 0.22222224)
+texture = ExtResource("2_4ybfh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door2" unique_id=1349008836]
+position = Vector2(-0.125, 0.5)
+shape = SubResource("RectangleShape2D_cc7sy")
+
+[node name="door1" type="Area2D" parent="." unique_id=1224784284 node_paths=PackedStringArray("target_door")]
+position = Vector2(-205, -102)
+script = ExtResource("1_4ybfh")
+target_door = NodePath("../door2")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="door1" unique_id=538755298]
+position = Vector2(-0.5000012, -0.5000038)
+scale = Vector2(0.19722223, 0.22500004)
+texture = ExtResource("2_4ybfh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door1" unique_id=1683734265]
+position = Vector2(0, -0.25)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[connection signal="body_entered" from="door2" to="door2" method="_on_body_entered"]
+[connection signal="body_entered" from="door1" to="door1" method="_on_body_entered"]
