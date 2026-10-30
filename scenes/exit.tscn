@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://cuv2l7sk80jiw"]
+
+[ext_resource type="Script" uid="uid://lqgoi8407sp3" path="res://codes/exit.gd" id="1_c7mer"]
+[ext_resource type="Texture2D" uid="uid://b6ebf718h2jbe" path="res://Custom assets/door.png" id="2_c7mer"]
+[ext_resource type="Script" uid="uid://dc0awnn1cxwco" path="res://codes/lever.gd" id="3_c7mer"]
+[ext_resource type="Script" uid="uid://c08v1glyb0836" path="res://codes/lever(broken).gd" id="5_ka15t"]
+[ext_resource type="Script" uid="uid://hn3qu53u3ps7" path="res://codes/repair_kit.gd" id="6_ywa8d"]
+[ext_resource type="Texture2D" uid="uid://jyu4dub2jb3n" path="res://Assets/Final/LeverBroken.png" id="7_1uste"]
+[ext_resource type="Texture2D" uid="uid://cmy1y7xhmmysv" path="res://Assets/Final/LeverOff.png" id="7_ddvly"]
+[ext_resource type="Texture2D" uid="uid://0xtb1bs6yaie" path="res://Custom assets/wrench.png" id="7_ywa8d"]
+[ext_resource type="AudioStream" uid="uid://cg8jrpm8e4y6d" path="res://Assets/Final/GameCleared.wav" id="8_rtnw0"]
+[ext_resource type="AudioStream" uid="uid://byj6nl5wmcxqk" path="res://Assets/Final/DoorLocked.mp3" id="9_doorlocked"]
+[ext_resource type="AudioStream" uid="uid://b0eokf3nm626" path="res://Assets/Final/UnlockDoor.wav" id="10_unlockdoor"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(48, 75.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2427a"]
+size = Vector2(33, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8on1t"]
+size = Vector2(29, 20)
+
+[node name="Exit&Lever" type="Node2D" unique_id=1017958364]
+
+[node name="Exit" type="Area2D" parent="." unique_id=1224784284 node_paths=PackedStringArray("levers")]
+position = Vector2(-66, 0)
+script = ExtResource("1_c7mer")
+levers = [NodePath("../lever"), NodePath("../lever(broken)")]
+metadata/_edit_group_ = true
+
+[node name="GameCleared" type="AudioStreamPlayer" parent="Exit" unique_id=1965668776]
+stream = ExtResource("8_rtnw0")
+
+[node name="DoorLocked" type="AudioStreamPlayer" parent="Exit" unique_id=1965668777]
+stream = ExtResource("9_doorlocked")
+
+[node name="Sprite2D" type="Sprite2D" parent="Exit" unique_id=538755298]
+position = Vector2(-0.5000012, -0.5000038)
+scale = Vector2(0.19722223, 0.22500004)
+texture = ExtResource("2_c7mer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=1683734265]
+position = Vector2(0, -0.25)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="lever" type="Area2D" parent="." unique_id=509604016]
+position = Vector2(-8, -8)
+script = ExtResource("3_c7mer")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lever" unique_id=1604574671]
+shape = SubResource("RectangleShape2D_2427a")
+
+[node name="UnlockDoor" type="AudioStreamPlayer" parent="lever" unique_id=1661247291]
+stream = ExtResource("10_unlockdoor")
+
+[node name="Sprite2D" type="Sprite2D" parent="lever" unique_id=507297208]
+position = Vector2(7.1525574e-07, 9.536743e-07)
+scale = Vector2(0.30357143, 0.32)
+texture = ExtResource("7_ddvly")
+
+[node name="lever(broken)" type="Area2D" parent="." unique_id=1149766421]
+position = Vector2(-8, 24)
+script = ExtResource("5_ka15t")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lever(broken)" unique_id=334803236]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_2427a")
+
+[node name="UnlockDoor" type="AudioStreamPlayer" parent="lever(broken)" unique_id=1661247292]
+stream = ExtResource("10_unlockdoor")
+
+[node name="DoorLocked" type="AudioStreamPlayer" parent="lever(broken)" unique_id=1661247293]
+stream = ExtResource("9_doorlocked")
+
+[node name="Sprite2D" type="Sprite2D" parent="lever(broken)" unique_id=389170225]
+position = Vector2(7.1525574e-07, 2.0000014)
+scale = Vector2(0.30357143, 0.32000002)
+texture = ExtResource("7_1uste")
+
+[node name="Rkit" type="Area2D" parent="." unique_id=1692859110]
+position = Vector2(40, -1)
+script = ExtResource("6_ywa8d")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rkit" unique_id=1488462169]
+position = Vector2(-6.5, 0)
+shape = SubResource("RectangleShape2D_8on1t")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rkit" unique_id=1534975983]
+position = Vector2(-6.499997, -4.7683716e-07)
+scale = Vector2(0.05664063, 0.0390625)
+texture = ExtResource("7_ywa8d")
+
+[connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]
+[connection signal="body_exited" from="Exit" to="Exit" method="_on_body_exited"]
+[connection signal="body_entered" from="lever" to="lever" method="_on_body_entered"]
+[connection signal="body_exited" from="lever" to="lever" method="_on_body_exited"]
+[connection signal="body_entered" from="lever(broken)" to="lever(broken)" method="_on_body_entered"]
+[connection signal="body_exited" from="lever(broken)" to="lever(broken)" method="_on_body_exited"]

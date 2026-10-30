@@ -1,0 +1,95 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1793372903
+::res://Assets/::1792588343
+::res://Assets/Final/::1793372849
+16x16_SpriteSheet.png::CompressedTexture2D::5815959688748231718::1775758710::1793281429::1::::<><><>0<>0<>129965ea6079aa5890a557f5935f71ad<>res://.godot/imported/16x16_SpriteSheet.png-c2728f20816136bf6e9de9d5fd3a90bc.ctex::
+BackgroundMusic.mp3::AudioStreamMP3::8711905290168570172::1793281003::1793284238::1::::<><><>0<>0<>ae0d4cec15ec0f1223e95df4526666eb<>res://.godot/imported/BackgroundMusic.mp3-fa6f851fec814089a5d81c158a822ef7.mp3str::
+boxing gloves.png::CompressedTexture2D::2228932749036026217::1793321935::1793321936::1::::<><><>0<>0<>e26bf55ca24818415a1758d869e4031b<>res://.godot/imported/boxing gloves.png-cad45d21915609c24ee02dc8e4aca0b0.ctex::
+Damaged.wav::AudioStreamWAV::1823528957877672573::1779676797::1793287451::1::::<><><>0<>0<>ee84ab4c3a5ea0872fa1aed69489d764<>res://.godot/imported/Damaged.wav-7ab142f5e54dca04af1897067c4c72cf.sample::
+demo.png::CompressedTexture2D::2793535126041094008::1775758931::1793281429::1::::<><><>0<>0<>6067a55ea47e1dc1a0641254f12e3293<>res://.godot/imported/demo.png-475ba80d7df895613f0129c45ff50a48.ctex::
+DoorLocked.mp3::AudioStreamMP3::4091438398005645462::1793286899::1793286903::1::::<><><>0<>0<>3e04d61f0dd3c6c0ff8148053c8733b5<>res://.godot/imported/DoorLocked.mp3-6cb79e53251b0d4d1c9ff3f8185a69fa.mp3str::
+DrinkPotion.wav::AudioStreamWAV::3932911951471209564::1779676797::1793286446::1::::<><><>0<>0<>25153ca99644faee08021f114cbe1c79<>res://.godot/imported/DrinkPotion.wav-b1aabd31e17c9fea628e8e9cb01c9d2b.sample::
+GameCleared.wav::AudioStreamWAV::5262676514423438537::1779676796::1793284995::1::::<><><>0<>0<>c015875fa92a8b339b79e497ad77bcac<>res://.godot/imported/GameCleared.wav-28993a66bc62a8c6b467e06eaff143db.sample::
+GameOver.wav::AudioStreamWAV::3988975670697264457::1779676796::1793284995::1::::<><><>0<>0<>92959e90b641a6f74763cb0dfee945ea<>res://.godot/imported/GameOver.wav-949f11ddb1fa16ad33ecca6210430dab.sample::
+Healing Potion.png::CompressedTexture2D::8221917579647824157::1793276227::1793276310::1::::<><><>0<>0<>b470f8730862bc3ca82f2a0ce9253c33<>res://.godot/imported/Healing Potion.png-129303e3f050d2281d48461e323c179e.ctex::
+HitEnemy.wav::AudioStreamWAV::2060453200055555853::1779676796::1793322832::1::::<><><>0<>0<>c663487cdbf70160b82306216be44daf<>res://.godot/imported/HitEnemy.wav-7c58441cfa6d1d93fb9836d2237a18e6.sample::
+Jump.wav::AudioStreamWAV::8447368252759875447::1779676797::1793284995::1::::<><><>0<>0<>27ecdff7498490562be751972bdbf3f9<>res://.godot/imported/Jump.wav-522053f67e0e4c9ef9b023b1c0724859.sample::
+LeverBroken.png::CompressedTexture2D::682510975266308449::1793322416::1793323140::1::::<><><>0<>0<>ff2ecfadda80f0c2e66e73f708b969a2<>res://.godot/imported/LeverBroken.png-28a436fdba405d1b1d9f497025d7546d.ctex::
+LeverOff.png::CompressedTexture2D::5666275774617961113::1793323075::1793323084::1::::<><><>0<>0<>b2fd944d812f3bd356e3fada44b0792e<>res://.godot/imported/LeverOff.png-282b4bf28b26d6aa749334667a4e7b40.ctex::
+LeverOn.png::CompressedTexture2D::6877578030470337157::1793322223::1793323140::1::::<><><>0<>0<>886a8f14e761389626a1b0a824d9871c<>res://.godot/imported/LeverOn.png-725108b785aaa601796c992cd3bd1fc9.ctex::
+OpenDoor.wav::AudioStreamWAV::3802240480102099207::1793282164::1793284238::1::::<><><>0<>0<>b63b86d697155810a866491b7a7d168e<>res://.godot/imported/OpenDoor.wav-74e9fc1ae984209e45c5e6d0ff443e35.sample::
+Polymorphed.wav::AudioStreamWAV::1785777960861615582::1779676796::1793284858::1::::<><><>0<>0<>c6e39faae39993dbe15b45127b2d3074<>res://.godot/imported/Polymorphed.wav-a52c4938e68846e3af15f5c3e8e20bd9.sample::
+Speed Potion.png::CompressedTexture2D::1078452141701585372::1793276914::1793276916::1::::<><><>0<>0<>9c6bcd882faeced8f01fc91349d72484<>res://.godot/imported/Speed Potion.png-67e63091f96ee7d8fa8ae2883f2e7254.ctex::
+Tiles.png::CompressedTexture2D::3986867227204594809::1792588343::1792588343::1::::<><><>0<>0<>1abbce89827a2c0f135a441c0fb9e50b<>res://.godot/imported/Tiles.png-6c00001a78971f2d5e6b62bcd2a07c61.ctex::
+UnlockDoor.wav::AudioStreamWAV::122066690822857377::1793282123::1793284238::1::::<><><>0<>0<>1ae7725d2adae828f9a9a774d196cd7f<>res://.godot/imported/UnlockDoor.wav-c375570963c3570bf06aef9965d34f17.sample::
+::res://codes/::1793367216
+camera_2d.gd::GDScript::7923658833415581223::1792588343::0::1::::<>Camera2D<><>0<>0<><>::
+countdown.gd::GDScript::4331973782684729418::1793206262::0::1::::<>Label<><>0<>0<><>::
+death.gd::GDScript::3734576645875148733::1793194497::0::1::::<>CanvasLayer<><>0<>0<><>::
+door_1(locked).gd::GDScript::4186489479977856023::1793286943::0::1::::<>Area2D<><>0<>0<><>::
+door_1.gd::GDScript::3183028726339056070::1793283599::0::1::::<>Area2D<><>0<>0<><>::
+door_2(locked).gd::GDScript::8373146115749638995::1793286950::0::1::::<>Area2D<><>0<>0<><>::
+door_2.gd::GDScript::7853296250346708513::1792588343::0::1::::<>Area2D<><>0<>0<><>::
+exit.gd::GDScript::805497099672241618::1793369302::0::1::::<>Area2D<><>0<>0<><>::
+gloves.gd::GDScript::2571024901303183038::1793357428::0::1::::<>Area2D<><>0<>0<><>::
+hplabel.gd::GDScript::7625744381118701278::1793206426::0::1::::<>Label<><>0<>0<><>::
+key.gd::GDScript::5595389018600692250::1793359483::0::1::::<>Area2D<><>0<>0<><>::
+lever(broken).gd::GDScript::6597008744936365043::1793367507::0::1::::BLever<>Area2D<><>0<>0<><>::
+lever.gd::GDScript::7351289173743702530::1793367507::0::1::::Lever<>Area2D<><>0<>0<><>::
+main_menu.gd::GDScript::6648047716904807850::1793366947::0::1::::<>Control<><>0<>0<><>::
+mob.gd::GDScript::2582648042437903877::1793359118::0::1::::<>CharacterBody2D<><>0<>0<><>::
+mob_collision.gd::GDScript::3272523557061226045::1792588343::0::1::::<>Area2D<><>0<>0<><>::
+mob_fast.gd::GDScript::2037494554649866911::1793367216::0::1::::<>CharacterBody2D<><>0<>0<><>::
+mob_witch.gd::GDScript::3313955092469334801::1793366850::0::1::::<>Area2D<><>0<>0<><>::
+pause_menu.gd::GDScript::3156558112261245144::1793193592::0::1::::<>CanvasLayer<><>0<>0<><>::
+player.gd::GDScript::7557819927394577647::1793369854::0::1::::<>CharacterBody2D<><>0<>0<><>::
+potion_h.gd::GDScript::5018607146002021077::1793287231::0::1::::<>Area2D<><>0<>0<><>::
+potion_s.gd::GDScript::5377535337829626522::1793322502::0::1::::<>Area2D<><>0<>0<><>::
+repair_kit.gd::GDScript::519888562880115552::1792940705::0::1::::RepairKit<>Area2D<><>0<>0<><>::
+spike.gd::GDScript::6257872601902124968::1792591593::0::1::::<>Area2D<><>0<>0<><>::
+witch.gd::GDScript::5498690996374292742::1793358445::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Custom assets/::1793372755
+blue door.png::CompressedTexture2D::3263147373794675900::1793323409::1793323416::1::::<><><>0<>0<>503e9e962281e4d93f789a9ce90007c0<>res://.godot/imported/blue door.png-388a8babce37eafa7c3410902d94a494.ctex::
+blue key.png::CompressedTexture2D::5200914778160278740::1793323337::1793323416::1::::<><><>0<>0<>d505e199aa351178346d437c66789615<>res://.godot/imported/blue key.png-1f73fa0e46729a95960c77b607230331.ctex::
+door.png::CompressedTexture2D::4570603715872549426::1792588343::1792588343::1::::<><><>0<>0<>b73dc27a95a97785f0aa715b09645d11<>res://.godot/imported/door.png-99fac208e706cd0cb8dc0818cabe8b57.ctex::
+green door.png::CompressedTexture2D::9038713921602370349::1793323464::1793324310::1::::<><><>0<>0<>6c400c0c07e285a2c4362449393dad28<>res://.godot/imported/green door.png-36e4c30e334b0a4e64c952b771e61c96.ctex::
+icon.svg::CompressedTexture2D::271845932648382669::1792588344::1792588344::1::::<><><>0<>0<>d658fc0432e80c819d04cf334a06305e<>res://.godot/imported/icon.svg-dcb881cb8596b3be645f8890f74b0552.ctex::
+key.png::CompressedTexture2D::7714490708960456842::1792588344::1792588344::1::::<><><>0<>0<>943243001720e5dafc8a99894fc1b7d6<>res://.godot/imported/key.png-1110b89eb4a28da5999b59a37e2f109d.ctex::
+mob.png::CompressedTexture2D::2701302008584490884::1792588344::1792588344::1::::<><><>0<>0<>ffed8a3794ef15d050349fbdaa602265<>res://.godot/imported/mob.png-b655a2b199462b569cc0d86d9fb7c984.ctex::
+ninja.png::CompressedTexture2D::1257171938596310658::1792908645::1792908647::1::::<><><>0<>0<>1f49a45d58ff56b204c9d550a6bdad11<>res://.godot/imported/ninja.png-bd964622fca247750fa03fa514a73444.ctex::
+orange door.png::CompressedTexture2D::333657808776636927::1793323532::1793324310::1::::<><><>0<>0<>c88a507262234298c8cb25d4489e730e<>res://.godot/imported/orange door.png-86692a6737cc04a805973465263ff97e.ctex::
+police stand.png::CompressedTexture2D::75268679261186664::1792911306::1792911307::1::::<><><>0<>0<>c6b9808520f49613327bdfdab7718028<>res://.godot/imported/police stand.png-a784c07729898fc988f9dc8abef6e1f3.ctex::
+police walk.png::CompressedTexture2D::2901202243868141408::1792911306::1792911307::1::::<><><>0<>0<>cc4b5baae0463f35702e9b52ec0a79a5<>res://.godot/imported/police walk.png-fa91986dcdd7c7eb02a890379e77faa2.ctex::
+red door.png::CompressedTexture2D::8288690788642296957::1793323389::1793323416::1::::<><><>0<>0<>3603e988ae87c7462bfc6b5024e34e08<>res://.godot/imported/red door.png-a12696bdd08371aa78c51d79640620ae.ctex::
+red key.png::CompressedTexture2D::1796469993867216722::1793323352::1793323416::1::::<><><>0<>0<>379aa5559d4317aebae84491c6bcef7d<>res://.godot/imported/red key.png-cb585fb754810c40ecdb738bfbe8ff49.ctex::
+spikes.png::CompressedTexture2D::2099819112891826155::1792588344::1792588344::1::::<><><>0<>0<>1c074acffeca6413034f91e15df04a8c<>res://.godot/imported/spikes.png-4c607c7804277109da64b3be7befb065.ctex::
+vill attack.png::CompressedTexture2D::65385239239229988::1793323302::1793323416::1::::<><><>0<>0<>ac7678642e7c7ab68ab4a584bbf3dc7c<>res://.godot/imported/vill attack.png-d6c44c489db61c7130eaeede155f64dd.ctex::
+vill polymorphed.png::CompressedTexture2D::7812566815871177925::1793324095::1793324310::1::::<><><>0<>0<>c36b6390b051784b1135cb6f30c804bf<>res://.godot/imported/vill polymorphed.png-d3dee29cc68f7ca9ff97bb7f0e43eedf.ctex::
+vill run.png::CompressedTexture2D::781797961064339924::1792588344::1792588344::1::::<><><>0<>0<>68b41a899ae4b3c723718d1f9f02d119<>res://.godot/imported/vill run.png-eb5559a5413d818a7861db3802e8acfe.ctex::
+vill stand.png::CompressedTexture2D::643227881310188083::1792588344::1792588344::1::::<><><>0<>0<>c820d4eb024019e360d4aeabf914d3fa<>res://.godot/imported/vill stand.png-36e7a9c048a67cdcee447e5a8920065b.ctex::
+witch eye blush.png::CompressedTexture2D::389211791051865422::1793324134::1793324311::1::::<><><>0<>0<>313170990cc4d7806d0b9a6ae22faf4d<>res://.godot/imported/witch eye blush.png-371b8ef17fd0f1b89aef647368f32a5a.ctex::
+witch eye open.png::CompressedTexture2D::8742848943543393085::1792908655::1792908656::1::::<><><>0<>0<>274a16f3c401c41a79f0aeaa13114890<>res://.godot/imported/witch eye open.png-145e6661e165c9554957bf4b4c4c2a29.ctex::
+wrench.png::CompressedTexture2D::1803358555962767940::1792939472::1792992012::1::::<><><>0<>0<>09edb7f91471ecc0d7ddf4155ef1579c<>res://.godot/imported/wrench.png-32216cd3d4003389c101f7e096a9bd35.ctex::
+yellow door.png::CompressedTexture2D::2337939913140599839::1793323443::1793324311::1::::<><><>0<>0<>18380a98a1ec319f40c87626033d37f0<>res://.godot/imported/yellow door.png-47fd5f685feeafeb98b44099211e53a6.ctex::
+::res://scenes/::1793372821
+blue key.png::CompressedTexture2D::2567324895372789212::1793359524::1793360262::1::::<><><>0<>0<>847f7e03ac7c71c0efccf39559e54daa<>res://.godot/imported/blue key.png-5efff737fbbc6ad9b33bad3c784aa616.ctex::
+complete.tscn::PackedScene::8443028948945879562::1793360306::0::1::::<><><>0<>0<><>::uid://bthb6xcxeeocb::::res://codes/death.gd
+death.tscn::PackedScene::5205299408619826469::1793207921::0::1::::<><><>0<>0<><>::uid://bthb6xcxeeocb::::res://codes/death.gd
+doors(locked).tscn::PackedScene::2252504416991486052::1793360194::0::1::::<><><>0<>0<><>::uid://drkaq1erqpmw6::::res://codes/door_2(locked).gd<>uid://byj6nl5wmcxqk::::res://Assets/Final/DoorLocked.mp3<>uid://b0eokf3nm626::::res://Assets/Final/UnlockDoor.wav<>uid://b6ebf718h2jbe::::res://Custom assets/door.png<>uid://buf3l0bp3dkol::::res://Assets/Final/OpenDoor.wav<>uid://b0v74t2xgne2j::::res://codes/door_1(locked).gd<>uid://clypifa2jk6c1::::res://codes/key.gd<>uid://0uhulw231dn3::::res://Custom assets/red key.png<>uid://cgdmkol8jh5bs::::res://Custom assets/blue key.png
+doors.tscn::PackedScene::696865157210017788::1793285093::0::1::::<><><>0<>0<><>::uid://bll5au5qi4mx7::::res://codes/door_1.gd<>uid://b6ebf718h2jbe::::res://Custom assets/door.png<>uid://duvapjfln0emc::::res://Assets/Final/open door.wav
+exit.tscn::PackedScene::6221630884572884194::1793369302::0::1::::<><><>0<>0<><>::uid://lqgoi8407sp3::::res://codes/exit.gd<>uid://b6ebf718h2jbe::::res://Custom assets/door.png<>uid://dc0awnn1cxwco::::res://codes/lever.gd<>uid://rjvk45doqw4e::::res://Assets/Final/Salt.png<>uid://c08v1glyb0836::::res://codes/lever(broken).gd<>uid://hn3qu53u3ps7::::res://codes/repair_kit.gd<>uid://jyu4dub2jb3n::::res://Assets/Final/LeverBroken.png<>uid://0xtb1bs6yaie::::res://Custom assets/wrench.png<>uid://cg8jrpm8e4y6d::::res://Assets/Final/GameCleared.wav<>uid://byj6nl5wmcxqk::::res://Assets/Final/DoorLocked.mp3<>uid://b0eokf3nm626::::res://Assets/Final/UnlockDoor.wav
+fatspike.tscn::PackedScene::5945389812647017953::1792589096::0::1::::<><><>0<>0<><>::uid://cvfmiocowm0nk::::res://codes/spike.gd<>uid://46fyjnep2x1t::::res://Custom assets/spikes.png
+gloves.tscn::PackedScene::4895277647681223696::1793360187::0::1::::<><><>0<>0<><>::uid://60ygxodljyyb::::res://Assets/Final/boxing gloves.png<>uid://bcvon0ugucg51::::res://codes/gloves.gd
+Leveltest with sprites.tscn::PackedScene::5452100938716579957::1793366886::0::1::::<><><>0<>0<><>::uid://bqe2p1l3qg7kt::::res://scenes/tutorial.gd<>uid://cwqkfld1er6xh::::res://scenes/pause_menu.tscn<>uid://blpd30li15upp::::res://scenes/main_menu.tscn<>uid://j6tjda8lbg5q::::res://scenes/doors.tscn<>uid://iw4o3j1f4rb5::::res://scenes/player.tscn<>uid://co4kahlvr04wo::::res://Assets/Final/16x16_SpriteSheet.png<>uid://bw2jedtx3wp6p::::res://Assets/Final/Tiles.png<>uid://4e5g0hnpsrjg::::res://scenes/spike.tscn<>uid://7deoh7y4ds6w::::res://scenes/doors(locked).tscn<>uid://bfnjta68rmn8s::::res://scenes/mob_fast.tscn<>uid://b5q4vipdako3o::::res://scenes/mob.tscn<>uid://divophlhcje33::::res://scenes/mob_witch.tscn<>uid://be7univfhworj::::res://scenes/potion_H.tscn<>uid://de6ku2n08bmno::::res://scenes/potion_s.tscn<>uid://cuv2l7sk80jiw::::res://scenes/exit.tscn<>uid://dwed2pijdyv37::::res://Assets/Final/BackgroundMusic.mp3<>uid://cb0kri3uxrio3::::res://scenes/gloves.tscn
+main.tscn::PackedScene::5350691955858169678::1792588344::0::1::::<><><>0<>0<><>::uid://46fyjnep2x1t::::res://Custom assets/spikes.png<>uid://cvfmiocowm0nk::::res://codes/spike.gd
+main_menu.tscn::PackedScene::3189697113706023469::1793286059::0::1::::<><><>0<>0<><>::uid://c1ymm0bq2q763::::res://codes/main_menu.gd<>uid://cg8jrpm8e4y6d::::res://Assets/Final/GameCleared.wav
+mob.tscn::PackedScene::4526914774856843118::1793360185::0::1::::<><><>0<>0<><>::uid://bc2b3olmqq47r::::res://codes/mob.gd<>uid://bcpwt01jng37::::res://Custom assets/police stand.png<>uid://bhlmm258adw7q::::res://Custom assets/police walk.png
+mob_fast.tscn::PackedScene::2764782245116642680::1793360187::0::1::::<><><>0<>0<><>::uid://4a8icx7co67t::::res://codes/mob_fast.gd<>uid://r58o5rgm47go::::res://Custom assets/ninja.png
+mob_witch.tscn::PackedScene::7765001942803501036::1793360186::0::1::::<><><>0<>0<><>::uid://ckluvw1cmgoio::::res://codes/witch.gd<>uid://dwtdpeeux8ie4::::res://Custom assets/witch eye open.png<>uid://fssi5dqejhoo::::res://Custom assets/witch eye blush.png<>uid://bnhkmd1akn2ev::::res://codes/mob_witch.gd<>uid://0pbrco6vgapa::::res://Assets/Final/Polymorphed.wav
+pause_menu.tscn::PackedScene::6350642653963696089::1793194714::0::1::::<><><>0<>0<><>::uid://bk8cby40vstga::::res://codes/pause_menu.gd
+player.tscn::PackedScene::608714339344676156::1793369884::0::1::::<><><>0<>0<><>::uid://dfxcgpvqk8c5d::::res://codes/player.gd<>uid://bw3j31s3c23r6::::res://Assets/Final/GameOver.wav<>uid://jft4s3fhlcrb::::res://Custom assets/vill stand.png<>uid://leydlrrw8ig7::::res://Custom assets/vill run.png<>uid://08lixm1lmssb::::res://Assets/Final/Damaged.wav<>uid://dsl76ku5v1nv0::::res://Assets/Final/Jump.wav<>uid://cgfqrx82jcuif::::res://scenes/death.tscn<>uid://dgv75ptm7tdsw::::res://codes/hplabel.gd<>uid://b2yo8fo4gb1cw::::res://codes/countdown.gd<>uid://6w5dpkgwmkq::::res://Custom assets/vill attack.png<>uid://4mdml28yss7v::::res://Assets/Final/HitEnemy.wav<>uid://djkp3meuo8pqb::::res://Custom assets/vill polymorphed.png
+potion_H.tscn::PackedScene::2734474154416343171::1793369507::0::1::::<><><>0<>0<><>::uid://cdrbyx2b763ef::::res://codes/potion_h.gd<>uid://bwbeqq6xewyky::::res://Assets/Final/DrinkPotion.wav<>uid://dpe01tgg17lib::::res://Assets/Final/Healing Potion.png
+potion_s.tscn::PackedScene::7504657461205997936::1793321813::0::1::::<><><>0<>0<><>::uid://ciu6hr42bm1e1::::res://codes/potion_s.gd<>uid://pmn7jj0qupey::::res://Assets/Final/Speed Potion.png<>uid://bwbeqq6xewyky::::res://Assets/Final/DrinkPotion.wav
+spike.tscn::PackedScene::2045567525574419036::1793325988::0::1::::<><><>0<>0<><>::uid://cvfmiocowm0nk::::res://codes/spike.gd<>uid://46fyjnep2x1t::::res://Custom assets/spikes.png
+tutorial.gd::GDScript::3519367222524925015::1793285696::0::1::::<>Node2D<><>0<>0<><>::
+tutorial_scene.tscn::PackedScene::5035361552892777818::1793369112::0::1::::<><><>0<>0<><>::uid://bqe2p1l3qg7kt::::res://scenes/tutorial.gd<>uid://cwqkfld1er6xh::::res://scenes/pause_menu.tscn<>uid://blpd30li15upp::::res://scenes/main_menu.tscn<>uid://co4kahlvr04wo::::res://Assets/Final/16x16_SpriteSheet.png<>uid://bw2jedtx3wp6p::::res://Assets/Final/Tiles.png<>uid://j6tjda8lbg5q::::res://scenes/doors.tscn<>uid://7deoh7y4ds6w::::res://scenes/doors(locked).tscn<>uid://4e5g0hnpsrjg::::res://scenes/spike.tscn<>uid://bfnjta68rmn8s::::res://scenes/mob_fast.tscn<>uid://divophlhcje33::::res://scenes/mob_witch.tscn<>uid://b5q4vipdako3o::::res://scenes/mob.tscn<>uid://be7univfhworj::::res://scenes/potion_H.tscn<>uid://de6ku2n08bmno::::res://scenes/potion_s.tscn<>uid://cuv2l7sk80jiw::::res://scenes/exit.tscn<>uid://dwed2pijdyv37::::res://Assets/Final/BackgroundMusic.mp3<>uid://cb0kri3uxrio3::::res://scenes/gloves.tscn<>uid://iw4o3j1f4rb5::::res://scenes/player.tscn

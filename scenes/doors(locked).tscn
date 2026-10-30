@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://7deoh7y4ds6w"]
+
+[ext_resource type="Script" uid="uid://drkaq1erqpmw6" path="res://codes/door_2(locked).gd" id="1_6dfby"]
+[ext_resource type="AudioStream" uid="uid://byj6nl5wmcxqk" path="res://Assets/Final/DoorLocked.mp3" id="2_3wajd"]
+[ext_resource type="AudioStream" uid="uid://b0eokf3nm626" path="res://Assets/Final/UnlockDoor.wav" id="2_org5f"]
+[ext_resource type="Texture2D" uid="uid://b6ebf718h2jbe" path="res://Custom assets/door.png" id="2_pv71s"]
+[ext_resource type="AudioStream" uid="uid://buf3l0bp3dkol" path="res://Assets/Final/OpenDoor.wav" id="3_3wajd"]
+[ext_resource type="Script" uid="uid://b0v74t2xgne2j" path="res://codes/door_1(locked).gd" id="3_8on1t"]
+[ext_resource type="Script" uid="uid://clypifa2jk6c1" path="res://codes/key.gd" id="3_ochm7"]
+[ext_resource type="Texture2D" uid="uid://0uhulw231dn3" path="res://Custom assets/red key.png" id="8_ccydt"]
+[ext_resource type="Texture2D" uid="uid://cgdmkol8jh5bs" path="res://Custom assets/blue key.png" id="9_fpdpm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc7sy"]
+size = Vector2(48.25, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(48, 75.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8on1t"]
+size = Vector2(42, 20)
+
+[node name="Doors(locked)" type="Node2D" unique_id=1017958364]
+
+[node name="door2" type="Area2D" parent="." unique_id=901524144 node_paths=PackedStringArray("target_door")]
+position = Vector2(-113, -74)
+script = ExtResource("1_6dfby")
+target_door = NodePath("../door1")
+required_key = "blue"
+metadata/_edit_group_ = true
+
+[node name="DoorLocked" type="AudioStreamPlayer" parent="door2" unique_id=1899748138]
+stream = ExtResource("2_3wajd")
+
+[node name="UnlockDoor" type="AudioStreamPlayer" parent="door2" unique_id=1377491667]
+stream = ExtResource("2_org5f")
+
+[node name="OpenDoor" type="AudioStreamPlayer" parent="door2" unique_id=1637394231]
+stream = ExtResource("3_3wajd")
+
+[node name="Sprite2D" type="Sprite2D" parent="door2" unique_id=2019180576]
+position = Vector2(-1.0000081, 1)
+scale = Vector2(0.20000002, 0.22222224)
+texture = ExtResource("2_pv71s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door2" unique_id=1349008836]
+position = Vector2(-0.125, 0.5)
+shape = SubResource("RectangleShape2D_cc7sy")
+
+[node name="door1" type="Area2D" parent="." unique_id=1224784284 node_paths=PackedStringArray("target_door")]
+position = Vector2(-205, -102)
+script = ExtResource("3_8on1t")
+target_door = NodePath("../door2")
+required_key = "blue"
+metadata/_edit_group_ = true
+
+[node name="DoorLocked" type="AudioStreamPlayer" parent="door1" unique_id=1131861778]
+stream = ExtResource("2_3wajd")
+
+[node name="UnlockDoor" type="AudioStreamPlayer" parent="door1" unique_id=2058843613]
+stream = ExtResource("2_org5f")
+
+[node name="OpenDoor" type="AudioStreamPlayer" parent="door1" unique_id=2005213925]
+stream = ExtResource("3_3wajd")
+
+[node name="Sprite2D" type="Sprite2D" parent="door1" unique_id=538755298]
+position = Vector2(-0.5000012, -0.5000038)
+scale = Vector2(0.19722223, 0.22500004)
+texture = ExtResource("2_pv71s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door1" unique_id=1683734265]
+position = Vector2(0, -0.25)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="key" type="Area2D" parent="." unique_id=1919384251]
+script = ExtResource("3_ochm7")
+red_sprite = ExtResource("8_ccydt")
+blue_sprite = ExtResource("9_fpdpm")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="key" unique_id=1165479272]
+shape = SubResource("RectangleShape2D_8on1t")
+
+[node name="Sprite2D" type="Sprite2D" parent="key" unique_id=25000392]
+position = Vector2(-3.5762787e-07, 9.23872e-07)
+scale = Vector2(0.041015625, 0.019531252)
+
+[connection signal="body_entered" from="door2" to="door2" method="_on_body_entered"]
+[connection signal="body_exited" from="door2" to="door2" method="_on_body_exited"]
+[connection signal="body_entered" from="door1" to="door1" method="_on_body_entered"]
+[connection signal="body_exited" from="door1" to="door1" method="_on_body_exited"]

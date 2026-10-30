@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://be7univfhworj"]
+
+[ext_resource type="Script" uid="uid://cdrbyx2b763ef" path="res://codes/potion_h.gd" id="1_148bw"]
+[ext_resource type="AudioStream" uid="uid://bwbeqq6xewyky" path="res://Assets/Final/DrinkPotion.wav" id="2_fcydc"]
+[ext_resource type="Texture2D" uid="uid://dpe01tgg17lib" path="res://Assets/Final/Healing Potion.png" id="2_srtx5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqq54"]
+size = Vector2(66, 49)
+
+[node name="potion_h" type="Area2D" unique_id=1817513341]
+script = ExtResource("1_148bw")
+
+[node name="DrinkPotion" type="AudioStreamPlayer" parent="." unique_id=773446599]
+stream = ExtResource("2_fcydc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=213435206]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_sqq54")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=198515735]
+position = Vector2(1.9073486e-06, -7.1525574e-07)
+scale = Vector2(0.3, 0.29999998)
+texture = ExtResource("2_srtx5")

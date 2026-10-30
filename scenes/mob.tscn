@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://b5q4vipdako3o"]
+
+[ext_resource type="Script" uid="uid://bc2b3olmqq47r" path="res://codes/mob.gd" id="1_bsing"]
+[ext_resource type="Texture2D" uid="uid://bcpwt01jng37" path="res://Custom assets/police stand.png" id="2_d4cuo"]
+[ext_resource type="Texture2D" uid="uid://bhlmm258adw7q" path="res://Custom assets/police walk.png" id="3_71rcx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uqdht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d4cuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_71rcx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc7sy"]
+size = Vector2(31, 31.666668)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(27.5, 24.33333)
+
+[node name="Buff_Police" type="CharacterBody2D" unique_id=196719572]
+position = Vector2(2, 0)
+scale = Vector2(2, 3)
+script = ExtResource("1_bsing")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1349167258]
+position = Vector2(2.750001, -1.3333353)
+scale = Vector2(0.44500002, 0.27333328)
+sprite_frames = SubResource("SpriteFrames_uqdht")
+frame_progress = 0.84878194
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1956074689]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=2088982339]
+position = Vector2(1, -4.166667)
+shape = SubResource("RectangleShape2D_cc7sy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1958652111]
+position = Vector2(0.75, -0.16666842)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1702494426]
+position = Vector2(28, 0)
+target_position = Vector2(0, 22)
+
+[node name="KOTimer" type="Timer" parent="." unique_id=236950928]
+wait_time = 300.0
+
+[connection signal="body_entered" from="Hitbox" to="Hitbox" method="_on_body_entered"]
+[connection signal="timeout" from="KOTimer" to="." method="_on_ko_timer_timeout"]

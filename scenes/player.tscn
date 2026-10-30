@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://iw4o3j1f4rb5"]
+
+[ext_resource type="Script" uid="uid://dfxcgpvqk8c5d" path="res://codes/player.gd" id="1_onrkg"]
+[ext_resource type="AudioStream" uid="uid://bw3j31s3c23r6" path="res://Assets/Final/GameOver.wav" id="2_fjrip"]
+[ext_resource type="Texture2D" uid="uid://jft4s3fhlcrb" path="res://Custom assets/vill stand.png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://leydlrrw8ig7" path="res://Custom assets/vill run.png" id="2_onrkg"]
+[ext_resource type="AudioStream" uid="uid://08lixm1lmssb" path="res://Assets/Final/Damaged.wav" id="2_ur7pv"]
+[ext_resource type="AudioStream" uid="uid://dsl76ku5v1nv0" path="res://Assets/Final/Jump.wav" id="3_smehm"]
+[ext_resource type="PackedScene" uid="uid://cgfqrx82jcuif" path="res://scenes/death.tscn" id="4_dqkch"]
+[ext_resource type="Script" uid="uid://dgv75ptm7tdsw" path="res://codes/hplabel.gd" id="5_qlg0r"]
+[ext_resource type="Script" uid="uid://b2yo8fo4gb1cw" path="res://codes/countdown.gd" id="6_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://6w5dpkgwmkq" path="res://Custom assets/vill attack.png" id="6_y4r1p"]
+[ext_resource type="AudioStream" uid="uid://4mdml28yss7v" path="res://Assets/Final/HitEnemy.wav" id="7_hitenemy"]
+[ext_resource type="Texture2D" uid="uid://djkp3meuo8pqb" path="res://Custom assets/vill polymorphed.png" id="8_d2wvv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8iwks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i3pqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y4r1p")
+}],
+"loop": 0,
+"name": &"villie_attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_onrkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d2wvv")
+}],
+"loop": 1,
+"name": &"villie_polymorphed",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i3pqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_onrkg")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8iwks"]
+size = Vector2(31, 44.49997)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(31, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5102b"]
+size = Vector2(75, 60)
+
+[node name="Player" type="CharacterBody2D" unique_id=786789734 groups=["Player"]]
+script = ExtResource("1_onrkg")
+metadata/_edit_group_ = true
+
+[node name="Damaged" type="AudioStreamPlayer" parent="." unique_id=715726979]
+stream = ExtResource("2_ur7pv")
+
+[node name="GameOver" type="AudioStreamPlayer" parent="." unique_id=535462153]
+stream = ExtResource("2_fjrip")
+
+[node name="Jump" type="AudioStreamPlayer" parent="." unique_id=611169170]
+stream = ExtResource("3_smehm")
+
+[node name="HitEnemy" type="AudioStreamPlayer" parent="." unique_id=1880401277]
+stream = ExtResource("7_hitenemy")
+
+[node name="invincible_time" type="Timer" parent="." unique_id=1075741320]
+one_shot = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=105091263]
+position = Vector2(-2, 21)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_8iwks")
+animation = &"villie_attack"
+frame_progress = 0.070175685
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=435727135]
+z_index = 1
+position = Vector2(-5.5, 25.249985)
+shape = SubResource("RectangleShape2D_8iwks")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1362897813]
+scale = Vector2(2, 2)
+zoom = Vector2(2, 2)
+
+[node name="Hp" type="Label" parent="Camera2D" unique_id=2049882141]
+process_mode = 3
+offset_left = -144.0
+offset_top = -64.5
+offset_right = -104.0
+offset_bottom = -41.5
+scale = Vector2(0.5, 0.5)
+text = "placeholder"
+script = ExtResource("5_qlg0r")
+
+[node name="Countdown" type="Label" parent="Camera2D" unique_id=1942529001]
+process_mode = 3
+offset_left = -144.0
+offset_top = -81.0
+offset_right = -6.0
+offset_bottom = -58.0
+scale = Vector2(0.5, 0.5)
+text = "placeholder timer"
+script = ExtResource("6_tuyoq")
+
+[node name="Timer" type="Timer" parent="Camera2D/Countdown" unique_id=1428193446]
+process_mode = 1
+wait_time = 600.0
+one_shot = true
+autostart = true
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=1154365965]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=1380720735]
+position = Vector2(-5.5, 25.5)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="Death" parent="." unique_id=812656376 instance=ExtResource("4_dqkch")]
+
+[node name="PunchHitbox" type="Area2D" parent="." unique_id=2107034645]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PunchHitbox" unique_id=1288256830]
+position = Vector2(27.5, 22)
+shape = SubResource("RectangleShape2D_5102b")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Camera2D/Countdown/Timer" to="." method="_on_timer_timeout"]
+
+[editable path="Death"]

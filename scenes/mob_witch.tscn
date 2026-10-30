@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://divophlhcje33"]
+
+[ext_resource type="Script" uid="uid://ckluvw1cmgoio" path="res://codes/witch.gd" id="1_ewnvv"]
+[ext_resource type="Texture2D" uid="uid://dwtdpeeux8ie4" path="res://Custom assets/witch eye open.png" id="2_oo0w7"]
+[ext_resource type="Texture2D" uid="uid://fssi5dqejhoo" path="res://Custom assets/witch eye blush.png" id="3_5102b"]
+[ext_resource type="Script" uid="uid://bnhkmd1akn2ev" path="res://codes/mob_witch.gd" id="3_ewnvv"]
+[ext_resource type="AudioStream" uid="uid://0pbrco6vgapa" path="res://Assets/Final/Polymorphed.wav" id="5_5102b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uqdht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oo0w7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5102b")
+}],
+"loop": 1,
+"name": &"polymorph_casted",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ewnvv"]
+radius = 57.0
+height = 194.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(42, 41)
+
+[node name="mob_witch" type="CharacterBody2D" unique_id=196719572]
+script = ExtResource("1_ewnvv")
+
+[node name="mob collision" type="Area2D" parent="." unique_id=1956074689]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("3_ewnvv")
+
+[node name="Polymorphed" type="AudioStreamPlayer" parent="mob collision" unique_id=997005047]
+stream = ExtResource("5_5102b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mob collision" unique_id=1349167258]
+position = Vector2(1.5000006, -6.999998)
+scale = Vector2(0.5500001, 0.58)
+sprite_frames = SubResource("SpriteFrames_uqdht")
+animation = &"polymorph_casted"
+
+[node name="Cooldown" type="Timer" parent="mob collision" unique_id=1625503190]
+wait_time = 6.0
+
+[node name="P_time" type="Timer" parent="mob collision" unique_id=1901734074]
+wait_time = 4.0
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mob collision" unique_id=1206949916]
+position = Vector2(0, -34)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ewnvv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1958652111]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1702494426]
+position = Vector2(28, 0)
+target_position = Vector2(0, 22)
+
+[node name="KOTimer" type="Timer" parent="." unique_id=1439624151]
+wait_time = 300.0
+
+[connection signal="body_entered" from="mob collision" to="mob collision" method="_on_body_entered"]
+[connection signal="body_exited" from="mob collision" to="mob collision" method="_on_body_exited"]
+[connection signal="timeout" from="mob collision/Cooldown" to="mob collision" method="_on_cooldown_timeout"]
+[connection signal="timeout" from="mob collision/P_time" to="mob collision" method="_on_p_time_timeout"]
+[connection signal="timeout" from="KOTimer" to="." method="_on_ko_timer_timeout"]
