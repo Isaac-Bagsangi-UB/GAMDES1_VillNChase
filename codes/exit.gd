@@ -48,6 +48,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _enter_door() -> void:
 	print("entered")
+	# Save this level + current difficulty as completed
+	GameSettings.mark_completed(get_tree().current_scene.scene_file_path, GameSettings.difficulty)
 	var screen = end_scene.instantiate()
 	get_tree().current_scene.add_child(screen)
 	get_tree().paused = true

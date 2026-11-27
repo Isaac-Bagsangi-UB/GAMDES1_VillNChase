@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://54hm0itp47l0"]
+
+[ext_resource type="Texture2D" uid="uid://d1asf7di13778" path="res://Custom assets/fullscreen_icon.png" id="1_kckq6"]
+[ext_resource type="Script" uid="uid://c6twus75niych" path="res://codes/fullscreen_button.gd" id="3_6qhdo"]
+[ext_resource type="Texture2D" uid="uid://b0xlcobd0a02u" path="res://Custom assets/window_icon.png" id="3_kckq6"]
+
+[node name="fullscreen_button" type="TextureButton" unique_id=990868800]
+offset_top = -4.0
+offset_right = 53.0
+offset_bottom = 49.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+action_mode = 0
+texture_normal = ExtResource("1_kckq6")
+texture_pressed = ExtResource("3_kckq6")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_6qhdo")
+metadata/_edit_group_ = true
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

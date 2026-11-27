@@ -1,38 +1,128 @@
 [gd_scene format=3 uid="uid://dsj4pn7orn635"]
 
 [ext_resource type="Script" uid="uid://bthb6xcxeeocb" path="res://codes/death.gd" id="1_a7i64"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_h3dff"]
-font_size = 50
+[ext_resource type="Script" uid="uid://crelg7b30ei0c" path="res://codes/complete_menu.gd" id="2_4bpax"]
+[ext_resource type="Texture2D" uid="uid://c8pkc14fp82a3" path="res://Custom assets/Level_finished_text.png" id="3_4bpax"]
+[ext_resource type="Texture2D" uid="uid://df83ii23r7jfy" path="res://Custom assets/Button.png" id="4_b7qwe"]
+[ext_resource type="Texture2D" uid="uid://ctwxmmccihteo" path="res://Custom assets/Button Hover.png" id="5_1l01k"]
+[ext_resource type="Texture2D" uid="uid://c5dsa1wyin2oy" path="res://Custom assets/level_select_btn_txt.png" id="6_xtdvl"]
+[ext_resource type="Texture2D" uid="uid://b8lf7ygx6jc20" path="res://Custom assets/restart_text.png" id="7_ljuh2"]
+[ext_resource type="Texture2D" uid="uid://b68h5htm3g20d" path="res://Custom assets/main_menu_text.png" id="8_oqno0"]
 
 [node name="Complete" type="CanvasLayer" unique_id=812656376]
 process_mode = 3
 script = ExtResource("1_a7i64")
 
-[node name="Menu" type="VBoxContainer" parent="." unique_id=1662248437]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+[node name="Menu2" type="Control" parent="." unique_id=1532556102]
+custom_minimum_size = Vector2(200, 90)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
+script = ExtResource("2_4bpax")
 
-[node name="CompleteLabel" type="Label" parent="Menu" unique_id=317640648]
-layout_mode = 2
-text = "Tutorial Finished"
-label_settings = SubResource("LabelSettings_h3dff")
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="ColorRect" type="ColorRect" parent="Menu2" unique_id=1465030445]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16856287, 0.16856287, 0.16856287, 0.5686275)
 
-[node name="Restart" type="Button" parent="Menu" unique_id=332804562]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "RESTART"
+[node name="PausedLabel" type="TextureRect" parent="Menu2" unique_id=1513544496]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -220.5
+offset_top = 28.0
+offset_right = 220.5
+offset_bottom = 106.0
+grow_horizontal = 2
+texture = ExtResource("3_4bpax")
 
-[connection signal="pressed" from="Menu/Restart" to="." method="_on_restart_pressed"]
+[node name="Level selection" type="TextureButton" parent="Menu2" unique_id=1072315173]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = -392.0
+offset_right = 147.5
+offset_bottom = -315.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("4_b7qwe")
+texture_hover = ExtResource("5_1l01k")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_group_ = true
+
+[node name="Restart" type="TextureButton" parent="Menu2/Level selection" unique_id=506278915]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -146.75
+offset_top = 12.0
+offset_right = 144.75
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("4_b7qwe")
+texture_hover = ExtResource("5_1l01k")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Menu2/Level selection/Restart" unique_id=188133962]
+position = Vector2(145.99998, 37.00001)
+scale = Vector2(0.6685238, 0.5454552)
+texture = ExtResource("7_ljuh2")
+
+[node name="toMain" type="TextureButton" parent="Menu2/Level selection/Restart" unique_id=1595077396]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.75
+offset_top = 133.0
+offset_right = 144.25
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("4_b7qwe")
+texture_hover = ExtResource("5_1l01k")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Menu2/Level selection/Restart/toMain" unique_id=1853159569]
+position = Vector2(145.99998, 37.00001)
+scale = Vector2(0.6685238, 0.5454552)
+texture = ExtResource("8_oqno0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Menu2/Level selection" unique_id=2064654873]
+position = Vector2(145.99998, 36.000004)
+scale = Vector2(0.6685238, 0.5882359)
+texture = ExtResource("6_xtdvl")
+
+[connection signal="pressed" from="Menu2/Level selection" to="Menu2" method="_on_level_selection_pressed"]
+[connection signal="pressed" from="Menu2/Level selection/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Menu2/Level selection/Restart/toMain" to="Menu2" method="_on_to_main_pressed"]

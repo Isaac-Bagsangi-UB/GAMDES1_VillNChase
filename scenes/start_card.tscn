@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://drhoxdm4kbllu"]
+
+[ext_resource type="Texture2D" uid="uid://b8jibbir4clcb" path="res://Custom assets/card.png" id="1_mdhkc"]
+[ext_resource type="Texture2D" uid="uid://c8fbt32lgfgji" path="res://Custom assets/crd btn unpressed(easy).png" id="2_r6ker"]
+[ext_resource type="Texture2D" uid="uid://c6ofju5ecvg3c" path="res://Custom assets/crd btn pressed(easy).png" id="3_fnhjm"]
+[ext_resource type="Texture2D" uid="uid://dicl8rbllyjy4" path="res://Custom assets/check.png" id="4_fwnsm"]
+[ext_resource type="Texture2D" uid="uid://dp4x8ryecpix0" path="res://Custom assets/crd btn unpressed(medium).png" id="5_a55ih"]
+[ext_resource type="Texture2D" uid="uid://wovbuhv3vbgq" path="res://Custom assets/crd btn pressed(medium).png" id="6_hvnfj"]
+[ext_resource type="Texture2D" uid="uid://b7lip7ao3rqjw" path="res://Custom assets/crd btn unpressed(hard).png" id="7_oo1jp"]
+[ext_resource type="Texture2D" uid="uid://be0q8ql241qm8" path="res://Custom assets/crd btn pressed(hard).png" id="8_0npdn"]
+[ext_resource type="Texture2D" uid="uid://df83ii23r7jfy" path="res://Custom assets/Button.png" id="9_uvtr1"]
+[ext_resource type="Texture2D" uid="uid://ctwxmmccihteo" path="res://Custom assets/Button Hover.png" id="10_rwowe"]
+[ext_resource type="Texture2D" uid="uid://da7im733cygt6" path="res://Custom assets/escape_text.png" id="11_57ig2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqdht"]
+
+[sub_resource type="Gradient" id="Gradient_sxsna"]
+colors = PackedColorArray(0.55, 0.7, 0.35, 1, 0.3, 0.45, 0.2, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5vw4j"]
+gradient = SubResource("Gradient_sxsna")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_lvlms"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=1837331835]
+offset_right = 592.0
+offset_bottom = 547.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uqdht")
+
+[node name="Previewarea" type="Control" parent="." unique_id=1479706763]
+layout_mode = 2
+
+[node name="Preview" type="TextureRect" parent="Previewarea" unique_id=755477954]
+layout_mode = 1
+offset_left = 31.0
+offset_top = 78.0
+offset_right = 310.0
+offset_bottom = 286.0
+size_flags_vertical = 3
+offset_transform_enabled = true
+texture = SubResource("GradientTexture2D_5vw4j")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=542489627]
+layout_mode = 2
+texture = ExtResource("1_mdhkc")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1432727041]
+layout_mode = 2
+
+[node name="VBox" type="Control" parent="Margin" unique_id=338358762]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Margin/VBox" unique_id=975786169]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 9.0
+offset_right = 296.0
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 26
+text = "MAP"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Easy" type="TextureButton" parent="Margin/VBox" unique_id=1982624884]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 346.0
+offset_right = 310.0
+offset_bottom = 406.0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_lvlms")
+texture_normal = ExtResource("2_r6ker")
+texture_pressed = ExtResource("3_fnhjm")
+texture_hover = ExtResource("3_fnhjm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="check(easy)" type="Sprite2D" parent="Margin/VBox/Easy" unique_id=900958038]
+visible = false
+position = Vector2(241, 29.999994)
+scale = Vector2(0.031601656, 0.04526749)
+texture = ExtResource("4_fwnsm")
+
+[node name="Medium" type="TextureButton" parent="Margin/VBox" unique_id=1079871785]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 401.0
+offset_right = 310.0
+offset_bottom = 460.0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_lvlms")
+texture_normal = ExtResource("5_a55ih")
+texture_pressed = ExtResource("6_hvnfj")
+texture_hover = ExtResource("6_hvnfj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="check(medium)" type="Sprite2D" parent="Margin/VBox/Medium" unique_id=8315479]
+visible = false
+position = Vector2(241, 29.999994)
+scale = Vector2(0.031601656, 0.04526749)
+texture = ExtResource("4_fwnsm")
+
+[node name="Hard" type="TextureButton" parent="Margin/VBox" unique_id=1050431404]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 458.0
+offset_right = 310.0
+offset_bottom = 519.0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_lvlms")
+texture_normal = ExtResource("7_oo1jp")
+texture_pressed = ExtResource("8_0npdn")
+texture_hover = ExtResource("8_0npdn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="check(hard)" type="Sprite2D" parent="Margin/VBox/Hard" unique_id=128445126]
+visible = false
+position = Vector2(241, 29.999994)
+scale = Vector2(0.031601656, 0.04526749)
+texture = ExtResource("4_fwnsm")
+
+[node name="Action" type="TextureButton" parent="Margin/VBox" unique_id=96003217]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 0
+offset_left = 34.0
+offset_top = 247.0
+offset_right = 312.0
+offset_bottom = 317.0
+texture_normal = ExtResource("9_uvtr1")
+texture_hover = ExtResource("10_rwowe")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="TextureRect" parent="Margin/VBox/Action" unique_id=1742405055]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.999994
+offset_top = 20.000011
+offset_right = 57.71106
+offset_bottom = -11.719959
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7258065, 0.75757515)
+texture = ExtResource("11_57ig2")

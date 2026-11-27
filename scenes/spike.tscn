@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://46fyjnep2x1t" path="res://Custom assets/spikes.png" id="2_tggh8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kqbd"]
-size = Vector2(246.66663, 40)
+size = Vector2(189.99997, 29.33334)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ybt1"]
-size = Vector2(114.28571, 46.60144)
+size = Vector2(84.12698, 33.33332)
 
 [node name="smallspike" type="Area2D" unique_id=913093777]
 position = Vector2(-11, 12)
@@ -18,12 +18,12 @@ script = ExtResource("1_7k7bx")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=214332401]
-position = Vector2(0, 23.999998)
-scale = Vector2(0.054166667, 0.030745577)
+position = Vector2(-5.364418e-07, 23.999998)
+scale = Vector2(0.049999997, 0.030745577)
 texture = ExtResource("2_tggh8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=390982897]
-position = Vector2(-9.536743e-07, 24)
+position = Vector2(0.666667, 28.000011)
 scale = Vector2(0.40000004, 1)
 shape = SubResource("RectangleShape2D_0kqbd")
 
@@ -35,7 +35,7 @@ collision_mask = 129
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeCollision" unique_id=769241011]
-position = Vector2(5.750002, -2.1601439)
+position = Vector2(5.9166694, -1.4869566)
 scale = Vector2(0.21000001, 0.20000002)
 shape = SubResource("RectangleShape2D_6ybt1")
 

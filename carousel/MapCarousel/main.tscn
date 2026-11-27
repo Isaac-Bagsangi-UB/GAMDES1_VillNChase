@@ -1,0 +1,102 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://map_card.tscn" id="1"]
+[ext_resource type="Script" path="res://main.gd" id="2"]
+
+[sub_resource type="StyleBoxFlat" id="side"]
+bg_color = Color(0.36, 0.24, 0.16, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.2, 0.12, 0.08, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.18, 0.2, 1)
+
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="LeftItem" type="Panel" parent="HBox"]
+custom_minimum_size = Vector2(40, 60)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("side")
+
+[node name="Scroll" type="ScrollContainer" parent="HBox"]
+custom_minimum_size = Vector2(0, 420)
+layout_mode = 2
+size_flags_horizontal = 3
+follow_focus = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="Cards" type="HBoxContainer" parent="HBox/Scroll"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 24
+
+[node name="Card1" parent="HBox/Scroll/Cards" instance=ExtResource("1")]
+layout_mode = 2
+
+[node name="Label" parent="HBox/Scroll/Cards/Card1/TitleBar" index="0"]
+text = "MAP 1"
+
+[node name="Card2" parent="HBox/Scroll/Cards" instance=ExtResource("1")]
+layout_mode = 2
+
+[node name="Label" parent="HBox/Scroll/Cards/Card2/TitleBar" index="0"]
+text = "MAP 2"
+
+[node name="Card3" parent="HBox/Scroll/Cards" instance=ExtResource("1")]
+layout_mode = 2
+
+[node name="Label" parent="HBox/Scroll/Cards/Card3/TitleBar" index="0"]
+text = "MAP 3"
+
+[node name="Card4" parent="HBox/Scroll/Cards" instance=ExtResource("1")]
+layout_mode = 2
+
+[node name="Label" parent="HBox/Scroll/Cards/Card4/TitleBar" index="0"]
+text = "MAP 4"
+
+[node name="Card5" parent="HBox/Scroll/Cards" instance=ExtResource("1")]
+layout_mode = 2
+
+[node name="Label" parent="HBox/Scroll/Cards/Card5/TitleBar" index="0"]
+text = "MAP 5"
+
+[node name="RightItem" type="Panel" parent="HBox"]
+custom_minimum_size = Vector2(40, 60)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("side")

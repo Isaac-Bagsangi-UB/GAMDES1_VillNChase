@@ -5,6 +5,8 @@ extends CharacterBody2D
 @export var feet_offset := Vector2(0, 40)
 @export var gravity := 980.0
 
+static var last_pickup_frame := -1 # shared by all items
+
 var held_by: Node2D = null
 var player_body: Node2D = null
 var world_scale := global_scale 
@@ -47,9 +49,12 @@ func pickup() -> void:
 	var player := player_body
 	if player == null:
 		return
+	if last_pickup_frame == Engine.get_process_frames():
+		return # another item was already picked up this frame
 	var index: int = player.get_free_slot() #finding slots
 	if index == -1:
 		return # no free slot, can't pick up
+	last_pickup_frame = Engine.get_process_frames() # claim this frame
 	player_body = null
 	held_by = player
 	player.set_slot(self, index) # nireregister yung item sa slot (also sets player.holding if it's the active slot)

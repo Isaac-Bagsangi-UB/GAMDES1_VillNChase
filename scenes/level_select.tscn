@@ -1,79 +1,171 @@
 [gd_scene format=3 uid="uid://7i6upxxx1wob"]
 
-[ext_resource type="Script" uid="uid://bbycb6w8wruqg" path="res://codes/level_select.gd" id="1_3shnc"]
+[ext_resource type="PackedScene" uid="uid://b7v14jco1xco2" path="res://scenes/map_card.tscn" id="1_3shnc"]
+[ext_resource type="Texture2D" uid="uid://bdopxsgv1pj1i" path="res://Custom assets/main_menu.png" id="1_p0wlc"]
+[ext_resource type="Script" uid="uid://bbycb6w8wruqg" path="res://codes/level_select.gd" id="1_r77uv"]
+[ext_resource type="Texture2D" uid="uid://brcruc8n11i04" path="res://Custom assets/prev btn.png" id="3_7plkq"]
+[ext_resource type="Texture2D" uid="uid://df83ii23r7jfy" path="res://Custom assets/Button.png" id="3_chg43"]
+[ext_resource type="Texture2D" uid="uid://it0xmx8n8irx" path="res://Custom assets/prev_btn_light.png" id="4_o2xx4"]
+[ext_resource type="Texture2D" uid="uid://ctwxmmccihteo" path="res://Custom assets/Button Hover.png" id="4_r77uv"]
+[ext_resource type="Texture2D" uid="uid://c53f7egs8hgin" path="res://Custom assets/back_text.png" id="5_chg43"]
+[ext_resource type="Texture2D" uid="uid://8wve2xygfkhl" path="res://Custom assets/next btn.png" id="5_ckc44"]
+[ext_resource type="Texture2D" uid="uid://brxb3ah3mcoai" path="res://Custom assets/next_btn_light.png" id="7_htctk"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_64kqf"]
-font_size = 50
+[sub_resource type="StyleBoxFlat" id="pbg"]
+bg_color = Color(0.15, 0.1, 0.07, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.2, 0.12, 0.08, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[node name="Level_Select" type="Control" unique_id=205229012]
+[sub_resource type="StyleBoxFlat" id="pfill"]
+bg_color = Color(1, 1, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.55, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="InputEventKey" id="keyleft"]
+keycode = 4194319
+
+[sub_resource type="Shortcut" id="scleft"]
+events = [SubResource("keyleft")]
+
+[sub_resource type="StyleBoxEmpty" id="tabempty"]
+
+[sub_resource type="InputEventKey" id="keyright"]
+keycode = 4194321
+
+[sub_resource type="Shortcut" id="scright"]
+events = [SubResource("keyright")]
+
+[node name="LevelSelect" type="Control" unique_id=151869880]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3shnc")
+script = ExtResource("1_r77uv")
 
-[node name="Title" type="Label" parent="." unique_id=1175906064]
+[node name="Background" type="TextureRect" parent="." unique_id=1841298789]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_p0wlc")
+expand_mode = 1
+
+[node name="Progress" type="ProgressBar" parent="." unique_id=1335537099]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 220.0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = -40.0
+offset_bottom = 28.0
 grow_horizontal = 2
-text = "Level Select
-"
-label_settings = SubResource("LabelSettings_64kqf")
-horizontal_alignment = 1
-vertical_alignment = 1
+mouse_filter = 2
+theme_override_styles/background = SubResource("pbg")
+theme_override_styles/fill = SubResource("pfill")
+max_value = 2.0
+step = 0.0
+value = 1.0
+show_percentage = false
 
-[node name="Tutorial" type="Button" parent="." unique_id=1056710796]
+[node name="HBox" type="HBoxContainer" parent="." unique_id=2143052995]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -98.0
-offset_top = -127.0
-offset_right = 99.0
-offset_bottom = -50.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 35.0
+offset_right = -20.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "Tutorial"
+theme_override_constants/separation = 40
+alignment = 1
 
-[node name="map_a" type="Button" parent="." unique_id=746762080]
+[node name="LeftButton" type="TextureButton" parent="HBox" unique_id=645691919]
+custom_minimum_size = Vector2(64, 96)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+shortcut = SubResource("scleft")
+texture_normal = ExtResource("3_7plkq")
+texture_hover = ExtResource("4_o2xx4")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Cards" type="TabContainer" parent="HBox" unique_id=1713638840]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("tabempty")
+current_tab = 0
+tabs_visible = false
+
+[node name="MapCard" parent="HBox/Cards" unique_id=1256599166 instance=ExtResource("1_3shnc")]
+layout_mode = 2
+level = "uid://cd0fw0qlidsxm"
+title = "MAP1"
+metadata/_tab_index = 0
+
+[node name="MapCard2" parent="HBox/Cards" unique_id=51626290 instance=ExtResource("1_3shnc")]
+visible = false
+layout_mode = 2
+level = "uid://nsuvgmeb15ys"
+title = "MAP2"
+metadata/_tab_index = 1
+
+[node name="RightButton" type="TextureButton" parent="HBox" unique_id=1621342104]
+custom_minimum_size = Vector2(64, 96)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+shortcut = SubResource("scright")
+texture_normal = ExtResource("5_ckc44")
+texture_hover = ExtResource("7_htctk")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="back" type="TextureButton" parent="." unique_id=772442649]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -98.5
-offset_top = -38.5
-offset_right = 98.5
-offset_bottom = 38.5
+offset_left = 344.0
+offset_top = 592.0
+offset_right = 554.0
+offset_bottom = 641.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "map_a"
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("3_chg43")
+texture_hover = ExtResource("4_r77uv")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="main menu" type="Button" parent="." unique_id=1216051840]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 272.0
-offset_top = 223.0
-offset_right = 552.0
-offset_bottom = 300.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "Main Menu"
+[node name="Sprite2D" type="Sprite2D" parent="back" unique_id=1476785749]
+position = Vector2(105.000015, 24.000011)
+scale = Vector2(0.5209583, 0.5454552)
+texture = ExtResource("5_chg43")
 
-[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
-[connection signal="pressed" from="map_a" to="." method="_on_map_a_pressed"]
-[connection signal="pressed" from="main menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="HBox/LeftButton" to="HBox/Cards" method="select_previous_available"]
+[connection signal="tab_changed" from="HBox/Cards" to="Progress" method="set_value"]
+[connection signal="pressed" from="HBox/RightButton" to="HBox/Cards" method="select_next_available"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://c3iixojaqsoce" path="res://Custom assets/items free.png" id="13_oprun"]
 [ext_resource type="Texture2D" uid="uid://coi65ndtccc80" path="res://Custom assets/fx_immune.png" id="15_oprun"]
 [ext_resource type="Texture2D" uid="uid://dh4ox3va7tjs2" path="res://Custom assets/fx_speed.png" id="16_a8ls1"]
+[ext_resource type="PackedScene" uid="uid://se427u24wdf5" path="res://scenes/start_screen.tscn" id="18_fulsm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8iwks"]
 animations = [{
@@ -73,6 +74,7 @@ size = Vector2(79.5, 67)
 
 [node name="Player" type="CharacterBody2D" unique_id=786789734 groups=["Player"]]
 script = ExtResource("1_onrkg")
+coyote_time = 0.2
 
 [node name="Damaged" type="AudioStreamPlayer" parent="." unique_id=715726979]
 stream = ExtResource("2_ur7pv")
@@ -106,14 +108,14 @@ shape = SubResource("CapsuleShape2D_3v2ag")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1362897813]
 scale = Vector2(2, 2)
-zoom = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)
 
 [node name="Countdown" type="Label" parent="Camera2D" unique_id=1942529001]
 process_mode = 3
-offset_left = 130.0
-offset_top = -66.5
-offset_right = 160.0
-offset_bottom = -43.5
+offset_left = 168.0
+offset_top = -82.5
+offset_right = 198.0
+offset_bottom = -59.5
 scale = Vector2(0.5, 0.5)
 text = "180"
 script = ExtResource("6_tuyoq")
@@ -125,14 +127,14 @@ one_shot = true
 autostart = true
 
 [node name="slot1" type="Sprite2D" parent="Camera2D" unique_id=1008252126]
-position = Vector2(-131, -67.50001)
+position = Vector2(-170.9375, -82.625)
 scale = Vector2(0.40820313, 0.41796875)
 texture = ExtResource("12_f1ej7")
 
 [node name="Item1" type="Sprite2D" parent="Camera2D/slot1" unique_id=554259667]
 
 [node name="slot2" type="Sprite2D" parent="Camera2D" unique_id=94949350]
-position = Vector2(-105.5, -67.5)
+position = Vector2(-145.4375, -82.62499)
 scale = Vector2(0.40869147, 0.41796878)
 texture = ExtResource("13_oprun")
 
@@ -141,9 +143,10 @@ texture = ExtResource("13_oprun")
 [node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=915764218]
 
 [node name="Health" type="Sprite2D" parent="Camera2D" unique_id=1979775475]
-position = Vector2(31.499998, -72)
+position = Vector2(72, -90.5)
 scale = Vector2(0.18749964, 0.24218751)
 texture = ExtResource("13_f1ej7")
+metadata/_edit_group_ = true
 
 [node name="Health2" type="Sprite2D" parent="Camera2D/Health" unique_id=1912692091]
 position = Vector2(63.315094, -0.00010681152)
@@ -190,6 +193,8 @@ position = Vector2(569.83575, -9.918213e-05)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("13_f1ej7")
 
+[node name="start_screen" parent="Camera2D" unique_id=1916908168 instance=ExtResource("18_fulsm")]
+
 [node name="PickupArea" type="Area2D" parent="." unique_id=1154365965]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=1380720735]
@@ -199,6 +204,8 @@ shape = SubResource("RectangleShape2D_uqdht")
 [node name="Death" parent="." unique_id=812656376 instance=ExtResource("4_dqkch")]
 
 [node name="PunchHitbox" type="Area2D" parent="." unique_id=2107034645]
+collision_layer = 7
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PunchHitbox" unique_id=1288256830]
 position = Vector2(24.25, 36.5)

@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://se427u24wdf5"]
+
+[ext_resource type="Texture2D" uid="uid://b8jibbir4clcb" path="res://Custom assets/card.png" id="1_qls88"]
+[ext_resource type="Script" uid="uid://bwdsg2eiu6rpt" path="res://codes/start_screen.gd" id="1_xfy2r"]
+[ext_resource type="Texture2D" uid="uid://c06x7recy048f" path="res://Custom assets/crd_btn_unpressedmovement.png" id="2_ecdxc"]
+[ext_resource type="Texture2D" uid="uid://dx0umf0v70mcj" path="res://pictures/movement.png" id="2_xfy2r"]
+[ext_resource type="Texture2D" uid="uid://ddxnyldevw6al" path="res://Custom assets/crd_btn_pressedmovement.png" id="3_qls88"]
+[ext_resource type="Texture2D" uid="uid://by84y883j6wfk" path="res://pictures/map_objects.png" id="3_xfy2r"]
+[ext_resource type="Texture2D" uid="uid://62xm3ua8c6q4" path="res://pictures/item.png" id="4_lt4el"]
+[ext_resource type="Texture2D" uid="uid://c4l45o1njj1gn" path="res://Custom assets/crd_btn_unpressedmapobjects.png" id="4_pcj7n"]
+[ext_resource type="Texture2D" uid="uid://glqqwm0lug2t" path="res://Custom assets/crd_btn_pressedmapobjects.png" id="5_bdg0b"]
+[ext_resource type="Texture2D" uid="uid://c1gq5munrjq71" path="res://Custom assets/crd_btn_unpresseditems.png" id="6_xfy2r"]
+[ext_resource type="Texture2D" uid="uid://cxl5266y6drf5" path="res://Custom assets/crd_btn_presseditems.png" id="7_lt4el"]
+[ext_resource type="Texture2D" uid="uid://df83ii23r7jfy" path="res://Custom assets/Button.png" id="9_ytx0m"]
+[ext_resource type="Texture2D" uid="uid://ctwxmmccihteo" path="res://Custom assets/Button Hover.png" id="10_a4px2"]
+[ext_resource type="Texture2D" uid="uid://c4yjnfu6wwo3g" path="res://Custom assets/main_text1.png" id="10_phykr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_60itb"]
+
+[sub_resource type="Gradient" id="Gradient_sxsna"]
+colors = PackedColorArray(0.55, 0.7, 0.35, 1, 0.3, 0.45, 0.2, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5vw4j"]
+gradient = SubResource("Gradient_sxsna")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_ecdxc"]
+
+[node name="start_screen" type="CanvasLayer" unique_id=1916908168]
+script = ExtResource("1_xfy2r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1424683468]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.53333336)
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1413735082]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -481.375
+offset_right = 481.375
+offset_bottom = 563.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_60itb")
+
+[node name="Previewarea" type="Control" parent="PanelContainer" unique_id=1461244263]
+layout_mode = 2
+
+[node name="Preview" type="TextureRect" parent="PanelContainer/Previewarea" unique_id=1468234863]
+layout_mode = 1
+offset_left = 118.375
+offset_top = 91.0
+offset_right = 835.375
+offset_bottom = 313.0
+size_flags_vertical = 3
+offset_transform_enabled = true
+texture = SubResource("GradientTexture2D_5vw4j")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="movement" type="TextureRect" parent="PanelContainer/Previewarea" unique_id=634557546]
+visible = false
+layout_mode = 0
+offset_left = 118.375
+offset_top = 91.0
+offset_right = 835.375
+offset_bottom = 313.0
+texture = ExtResource("2_xfy2r")
+expand_mode = 1
+
+[node name="map_objects" type="TextureRect" parent="PanelContainer/Previewarea" unique_id=250482634]
+visible = false
+layout_mode = 0
+offset_left = 118.375
+offset_top = 91.0
+offset_right = 835.375
+offset_bottom = 313.0
+texture = ExtResource("3_xfy2r")
+expand_mode = 1
+
+[node name="items" type="TextureRect" parent="PanelContainer/Previewarea" unique_id=431298257]
+visible = false
+layout_mode = 0
+offset_left = 118.375
+offset_top = 91.0
+offset_right = 835.375
+offset_bottom = 338.0
+texture = ExtResource("4_lt4el")
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer/Previewarea" unique_id=1934314748]
+layout_mode = 0
+offset_left = 93.375
+offset_top = 102.0
+offset_right = 858.375
+offset_bottom = 137.0
+color = Color(0, 0, 0, 0.5764706)
+
+[node name="movement_text" type="Label" parent="PanelContainer/Previewarea" unique_id=1352670353]
+visible = false
+layout_mode = 0
+offset_left = 118.375
+offset_top = 98.0
+offset_right = 835.375
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 30
+text = "←↑→/wasd for movement and ␣ to jump"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="map_objects_text" type="Label" parent="PanelContainer/Previewarea" unique_id=176935826]
+visible = false
+layout_mode = 0
+offset_left = 118.375
+offset_top = 98.0
+offset_right = 835.375
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 30
+text = "press \"F\" to interact with objects"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="items_text" type="Label" parent="PanelContainer/Previewarea" unique_id=261709617]
+visible = false
+layout_mode = 0
+offset_left = 118.375
+offset_top = 98.0
+offset_right = 835.375
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 20
+text = "press \"E\" to use equipment \"F\" for interaction and \"R\" to switch"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=729649502]
+layout_mode = 2
+texture = ExtResource("1_qls88")
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer" unique_id=1528277226]
+layout_mode = 2
+
+[node name="VBox" type="Control" parent="PanelContainer/Margin" unique_id=1421664299]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PanelContainer/Margin/VBox" unique_id=199239838]
+layout_mode = 0
+offset_left = 118.375
+offset_top = 9.0
+offset_right = 814.375
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 35
+text = "Controls"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="movement_btn" type="TextureButton" parent="PanelContainer/Margin/VBox" unique_id=1802141899]
+layout_mode = 0
+offset_left = 109.375
+offset_top = 354.0
+offset_right = 851.375
+offset_bottom = 416.0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_ecdxc")
+texture_normal = ExtResource("2_ecdxc")
+texture_pressed = ExtResource("3_qls88")
+texture_hover = ExtResource("3_qls88")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="map_objects_btn" type="TextureButton" parent="PanelContainer/Margin/VBox" unique_id=648827990]
+layout_mode = 0
+offset_left = 109.375
+offset_top = 411.0
+offset_right = 851.375
+offset_bottom = 471.0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_ecdxc")
+texture_normal = ExtResource("4_pcj7n")
+texture_pressed = ExtResource("5_bdg0b")
+texture_hover = ExtResource("5_bdg0b")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="items_btn" type="TextureButton" parent="PanelContainer/Margin/VBox" unique_id=484757226]
+layout_mode = 0
+offset_left = 109.375
+offset_top = 469.0
+offset_right = 851.375
+offset_bottom = 531.0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_ecdxc")
+texture_normal = ExtResource("6_xfy2r")
+texture_pressed = ExtResource("7_lt4el")
+texture_hover = ExtResource("7_lt4el")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Action" type="TextureButton" parent="PanelContainer/Margin/VBox" unique_id=2040273565]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -227.625
+offset_top = 12.0
+offset_right = 220.375
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("9_ytx0m")
+texture_hover = ExtResource("10_a4px2")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="TextureRect" parent="PanelContainer/Margin/VBox/Action" unique_id=1495561429]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -413.12503
+offset_top = -59.00003
+offset_right = 99.4082
+offset_bottom = 3.0400696
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.7258065, 0.75757515)
+texture = ExtResource("10_phykr")
+
+[connection signal="toggled" from="PanelContainer/Margin/VBox/movement_btn" to="." method="_on_movement_btn_toggled"]
+[connection signal="toggled" from="PanelContainer/Margin/VBox/map_objects_btn" to="." method="_on_map_objects_btn_toggled"]
+[connection signal="toggled" from="PanelContainer/Margin/VBox/items_btn" to="." method="_on_items_btn_toggled"]
+[connection signal="pressed" from="PanelContainer/Margin/VBox/Action" to="." method="_on_action_pressed"]
