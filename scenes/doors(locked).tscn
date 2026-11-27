@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://7deoh7y4ds6w"]
 
 [ext_resource type="Script" uid="uid://drkaq1erqpmw6" path="res://codes/door_2(locked).gd" id="1_6dfby"]
+[ext_resource type="Script" uid="uid://crokxq6j0xj4j" path="res://codes/doors(locked_mode).gd" id="1_jpykx"]
 [ext_resource type="AudioStream" uid="uid://byj6nl5wmcxqk" path="res://Assets/Final/DoorLocked.mp3" id="2_3wajd"]
 [ext_resource type="Texture2D" uid="uid://dqddr5nsmt2jh" path="res://Custom assets/red door.png" id="2_6ap54"]
 [ext_resource type="AudioStream" uid="uid://b0eokf3nm626" path="res://Assets/Final/UnlockDoor.wav" id="2_org5f"]
@@ -18,17 +19,15 @@ size = Vector2(48.25, 75)
 size = Vector2(48, 75.5)
 
 [node name="Doors(locked)" type="Node2D" unique_id=1017958364]
-
-[node name="door2" type="Area2D" parent="." unique_id=901524144 node_paths=PackedStringArray("target_door")]
-position = Vector2(-113, -74)
-script = ExtResource("1_6dfby")
-target_door = NodePath("../door1")
-unlock_method = "levers"
-required_key = "blue"
+script = ExtResource("1_jpykx")
 red_sprite = ExtResource("2_6ap54")
 blue_sprite = ExtResource("3_jgo5m")
 yellow_sprite = ExtResource("4_2e52i")
 green_sprite = ExtResource("5_p5wko")
+
+[node name="door2" type="Area2D" parent="." unique_id=901524144]
+position = Vector2(-113, -74)
+script = ExtResource("1_6dfby")
 
 [node name="DoorLocked" type="AudioStreamPlayer" parent="door2" unique_id=1899748138]
 stream = ExtResource("2_3wajd")
@@ -56,15 +55,9 @@ offset_right = 27.0
 offset_bottom = -36.0
 text = "Locked"
 
-[node name="door1" type="Area2D" parent="." unique_id=1224784284 node_paths=PackedStringArray("target_door")]
+[node name="door1" type="Area2D" parent="." unique_id=1224784284]
 position = Vector2(-205, -102)
 script = ExtResource("3_8on1t")
-target_door = NodePath("../door2")
-required_key = "blue"
-red_sprite = ExtResource("2_6ap54")
-blue_sprite = ExtResource("3_jgo5m")
-yellow_sprite = ExtResource("4_2e52i")
-green_sprite = ExtResource("5_p5wko")
 metadata/_edit_group_ = true
 
 [node name="DoorLocked" type="AudioStreamPlayer" parent="door1" unique_id=1131861778]

@@ -3,6 +3,10 @@ extends PickableItem
 
 var durability := 2   # how many successful punches before they break
 var punch_hit := false
+var damaged := false  # true once the sprite has been swapped to the damaged look
+
+# The sprite shown after the first successful hit
+var damaged_texture = preload("res://Custom assets/gloves_damaged.png")  # <- change this path
 
 
 func _init() -> void:
@@ -37,3 +41,19 @@ func on_frame_changed(player) -> void:
 		if durability <= 0:
 			player.clear_slot()
 			queue_free()
+		elif not damaged:
+			damaged = true
+			update_sprite(player)
+
+
+# Swaps the gloves' picture to the damaged version
+func update_sprite(player) -> void:
+	# pangpalit lang ng sprite
+	var world_sprite = get_node_or_null("Sprite2D")
+	if world_sprite and world_sprite.texture:
+		# SIZE FIX: keep the on-screen size the same even if the damaged PNG has
+		# different pixel dimensions than the original, so it doesn't blow up
+		var old_size: Vector2 = world_sprite.texture.get_size()
+		var new_size: Vector2 = damaged_texture.get_size()
+		world_sprite.texture = damaged_texture
+		world_sprite.scale *= old_size / new_size

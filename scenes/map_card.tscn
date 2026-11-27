@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://b7v14jco1xco2"]
+
+[ext_resource type="Script" uid="uid://bgno2w3afwjus" path="res://codes/map_card.gd" id="1_65fb1"]
+[ext_resource type="Texture2D" uid="uid://df83ii23r7jfy" path="res://Custom assets/Button.png" id="2_p4c0f"]
+[ext_resource type="Texture2D" uid="uid://b8jibbir4clcb" path="res://Custom assets/card.png" id="2_sugqp"]
+[ext_resource type="Texture2D" uid="uid://c8fbt32lgfgji" path="res://Custom assets/crd btn unpressed(easy).png" id="3_2h7m3"]
+[ext_resource type="Texture2D" uid="uid://ctwxmmccihteo" path="res://Custom assets/Button Hover.png" id="3_h8jry"]
+[ext_resource type="Texture2D" uid="uid://da7im733cygt6" path="res://Custom assets/escape_text.png" id="4_g5s4d"]
+[ext_resource type="Texture2D" uid="uid://c6ofju5ecvg3c" path="res://Custom assets/crd btn pressed(easy).png" id="4_oeoav"]
+[ext_resource type="Texture2D" uid="uid://dp4x8ryecpix0" path="res://Custom assets/crd btn unpressed(medium).png" id="5_mn4co"]
+[ext_resource type="Texture2D" uid="uid://dicl8rbllyjy4" path="res://Custom assets/check.png" id="5_oeoav"]
+[ext_resource type="Texture2D" uid="uid://wovbuhv3vbgq" path="res://Custom assets/crd btn pressed(medium).png" id="6_f4jp2"]
+[ext_resource type="Texture2D" uid="uid://b7lip7ao3rqjw" path="res://Custom assets/crd btn unpressed(hard).png" id="7_wm7sj"]
+[ext_resource type="Texture2D" uid="uid://be0q8ql241qm8" path="res://Custom assets/crd btn pressed(hard).png" id="8_buu15"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqdht"]
+
+[sub_resource type="Gradient" id="Gradient_oeoav"]
+colors = PackedColorArray(0.55, 0.7, 0.35, 1, 0.3, 0.45, 0.2, 1)
+
+[sub_resource type="GradientTexture2D" id="gradtex"]
+gradient = SubResource("Gradient_oeoav")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="ButtonGroup" id="group"]
+
+[node name="MapCard" type="PanelContainer" unique_id=1256599166]
+custom_minimum_size = Vector2(350, 550)
+offset_right = 350.0
+offset_bottom = 550.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uqdht")
+script = ExtResource("1_65fb1")
+
+[node name="Previewarea" type="Control" parent="." unique_id=1934711643]
+layout_mode = 2
+
+[node name="Preview" type="TextureRect" parent="Previewarea" unique_id=1588654241]
+layout_mode = 1
+offset_left = 31.0
+offset_top = 78.0
+offset_right = 310.0
+offset_bottom = 286.0
+size_flags_vertical = 3
+offset_transform_enabled = true
+texture = SubResource("gradtex")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1209560588]
+layout_mode = 2
+texture = ExtResource("2_sugqp")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=580895693]
+layout_mode = 2
+
+[node name="VBox" type="Control" parent="Margin" unique_id=186239496]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Margin/VBox" unique_id=452155826]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 9.0
+offset_right = 296.0
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 26
+text = "MAP"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Easy" type="TextureButton" parent="Margin/VBox" unique_id=1237513096]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 346.0
+offset_right = 310.0
+offset_bottom = 406.0
+toggle_mode = true
+button_group = SubResource("group")
+texture_normal = ExtResource("3_2h7m3")
+texture_pressed = ExtResource("4_oeoav")
+texture_hover = ExtResource("4_oeoav")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="check(easy)" type="Sprite2D" parent="Margin/VBox/Easy" unique_id=1484502180]
+visible = false
+position = Vector2(241, 29.999994)
+scale = Vector2(0.031601656, 0.04526749)
+texture = ExtResource("5_oeoav")
+
+[node name="Medium" type="TextureButton" parent="Margin/VBox" unique_id=847590213]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 401.0
+offset_right = 310.0
+offset_bottom = 460.0
+toggle_mode = true
+button_group = SubResource("group")
+texture_normal = ExtResource("5_mn4co")
+texture_pressed = ExtResource("6_f4jp2")
+texture_hover = ExtResource("6_f4jp2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="check(medium)" type="Sprite2D" parent="Margin/VBox/Medium" unique_id=1422877764]
+visible = false
+position = Vector2(241, 29.999994)
+scale = Vector2(0.031601656, 0.04526749)
+texture = ExtResource("5_oeoav")
+
+[node name="Hard" type="TextureButton" parent="Margin/VBox" unique_id=38617722]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 458.0
+offset_right = 310.0
+offset_bottom = 519.0
+toggle_mode = true
+button_group = SubResource("group")
+texture_normal = ExtResource("7_wm7sj")
+texture_pressed = ExtResource("8_buu15")
+texture_hover = ExtResource("8_buu15")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="check(hard)" type="Sprite2D" parent="Margin/VBox/Hard" unique_id=1229001078]
+visible = false
+position = Vector2(241, 29.999994)
+scale = Vector2(0.031601656, 0.04526749)
+texture = ExtResource("5_oeoav")
+
+[node name="Action" type="TextureButton" parent="Margin/VBox" unique_id=1676439054]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 0
+offset_left = 34.0
+offset_top = 247.0
+offset_right = 312.0
+offset_bottom = 317.0
+texture_normal = ExtResource("2_p4c0f")
+texture_hover = ExtResource("3_h8jry")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="TextureRect" parent="Margin/VBox/Action" unique_id=909651045]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.999994
+offset_top = 20.000011
+offset_right = 57.71106
+offset_bottom = -11.719959
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7258065, 0.75757515)
+texture = ExtResource("4_g5s4d")
+
+[connection signal="pressed" from="Margin/VBox/Easy" to="." method="_on_easy_pressed"]
+[connection signal="pressed" from="Margin/VBox/Medium" to="." method="_on_medium_pressed"]
+[connection signal="pressed" from="Margin/VBox/Hard" to="." method="_on_hard_pressed"]
+[connection signal="pressed" from="Margin/VBox/Action" to="." method="_on_action_pressed"]

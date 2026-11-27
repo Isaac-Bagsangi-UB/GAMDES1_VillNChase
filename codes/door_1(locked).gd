@@ -1,29 +1,28 @@
 extends Area2D
 
-@export var target_door: Area2D
-@export_enum("key", "levers") var unlock_method := "key"
-
-@export_group("Key")
-@export_enum("red", "blue", "green", "yellow") var required_key := "red"
-@export var red_sprite: Texture2D
-@export var blue_sprite: Texture2D
-@export var yellow_sprite: Texture2D
-@export var green_sprite: Texture2D
-
-@export_group("Levers")
-@export var levers: Array[Area2D] = []
+var target_door: Area2D  # CHANGED: no longer @export, the parent sets it
+var unlock_method := "key"  # CHANGED: no longer @export
+var required_key := "red"  # CHANGED: no longer @export
+var red_sprite: Texture2D  # CHANGED: no longer @export
+var blue_sprite: Texture2D  # CHANGED: no longer @export
+var yellow_sprite: Texture2D  # CHANGED: no longer @export
+var green_sprite: Texture2D  # CHANGED: no longer @export
+var levers: Array[Area2D] = []  # CHANGED: no longer @export
 
 var unlocked := false  # only used by key doors
 var player_in_range := false
 var player_body: Node2D
 
-func _ready() -> void:
-	if unlock_method == "key":
-		match required_key:
-			"red": $Sprite2D.texture = red_sprite
-			"blue": $Sprite2D.texture = blue_sprite
-			"green": $Sprite2D.texture = green_sprite
-			"yellow": $Sprite2D.texture = yellow_sprite
+# ADDED: called by the parent after it sets the values
+# (this is the old _ready match block; _ready itself is removed)
+func _apply_sprite() -> void:
+	if unlock_method != "key":
+		return
+	match required_key:
+		"red": $Sprite2D.texture = red_sprite
+		"blue": $Sprite2D.texture = blue_sprite
+		"green": $Sprite2D.texture = green_sprite
+		"yellow": $Sprite2D.texture = yellow_sprite
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):

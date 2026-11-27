@@ -1,5 +1,4 @@
-class_name map
-extends Node2D
+extends map
 
 
 # Called when the node enters the scene tree for the first time.

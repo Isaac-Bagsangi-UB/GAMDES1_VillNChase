@@ -1,0 +1,306 @@
+[gd_scene format=3]
+
+[sub_resource type="StyleBoxFlat" id="panel"]
+bg_color = Color(0.36, 0.24, 0.16, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.2, 0.12, 0.08, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="title"]
+bg_color = Color(0.3, 0.2, 0.14, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 6
+content_margin_top = 6
+content_margin_right = 6
+content_margin_bottom = 6
+
+[sub_resource type="StyleBoxFlat" id="preview"]
+bg_color = Color(0.15, 0.1, 0.07, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.2, 0.12, 0.08, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 4
+content_margin_top = 4
+content_margin_right = 4
+content_margin_bottom = 4
+
+[sub_resource type="StyleBoxFlat" id="pressed"]
+bg_color = Color(1, 1, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.55, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+content_margin_left = 4
+content_margin_top = 4
+content_margin_right = 4
+content_margin_bottom = 4
+
+[sub_resource type="StyleBoxFlat" id="focus"]
+draw_center = false
+bg_color = Color(0,0,0,0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+content_margin_left = 4
+content_margin_top = 4
+content_margin_right = 4
+content_margin_bottom = 4
+
+[sub_resource type="StyleBoxFlat" id="escframe"]
+bg_color = Color(0.79, 0.71, 0.95, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6, 0.5, 0.85, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+content_margin_left = 4
+content_margin_top = 4
+content_margin_right = 4
+content_margin_bottom = 4
+
+[sub_resource type="StyleBoxFlat" id="escnormal"]
+bg_color = Color(0.61, 0.35, 0.82, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 4
+content_margin_top = 4
+content_margin_right = 4
+content_margin_bottom = 4
+
+[sub_resource type="StyleBoxFlat" id="eschover"]
+bg_color = Color(0.72, 0.48, 0.92, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 4
+content_margin_top = 4
+content_margin_right = 4
+content_margin_bottom = 4
+
+[sub_resource type="StyleBoxEmpty" id="empty"]
+content_margin_left = 6.0
+content_margin_right = 6.0
+
+[sub_resource type="Gradient" id="grad"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(0.55, 0.7, 0.35, 1, 0.3, 0.45, 0.2, 1)
+
+[sub_resource type="GradientTexture2D" id="gradtex"]
+gradient = SubResource("grad")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="ButtonGroup" id="group"]
+resource_local_to_scene = true
+
+[node name="MapCard" type="Control"]
+custom_minimum_size = Vector2(200, 400)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("panel")
+
+[node name="Margin" type="MarginContainer" parent="Background"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 36
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 36
+
+[node name="VBox" type="VBoxContainer" parent="Background/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PreviewFrame" type="PanelContainer" parent="Background/Margin/VBox"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("preview")
+
+[node name="Preview" type="TextureRect" parent="Background/Margin/VBox/PreviewFrame"]
+layout_mode = 2
+texture = SubResource("gradtex")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Rows" type="VBoxContainer" parent="Background/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="EasyRow" type="HBoxContainer" parent="Background/Margin/VBox/Rows"]
+layout_mode = 2
+
+[node name="Icon" type="Label" parent="Background/Margin/VBox/Rows/EasyRow"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+text = "/"
+horizontal_alignment = 1
+
+[node name="EasyButton" type="Button" parent="Background/Margin/VBox/Rows/EasyRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.95, 0.9, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0.9, 0.8, 1)
+theme_override_styles/focus = SubResource("focus")
+theme_override_styles/hover_pressed = SubResource("pressed")
+theme_override_styles/hover = SubResource("empty")
+theme_override_styles/pressed = SubResource("pressed")
+theme_override_styles/normal = SubResource("empty")
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("group")
+text = "Easy"
+alignment = 0
+
+[node name="MediumRow" type="HBoxContainer" parent="Background/Margin/VBox/Rows"]
+layout_mode = 2
+
+[node name="Icon" type="Label" parent="Background/Margin/VBox/Rows/MediumRow"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+text = "/"
+horizontal_alignment = 1
+
+[node name="MediumButton" type="Button" parent="Background/Margin/VBox/Rows/MediumRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.95, 0.9, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0.9, 0.8, 1)
+theme_override_styles/focus = SubResource("focus")
+theme_override_styles/hover_pressed = SubResource("pressed")
+theme_override_styles/hover = SubResource("empty")
+theme_override_styles/pressed = SubResource("pressed")
+theme_override_styles/normal = SubResource("empty")
+toggle_mode = true
+button_group = SubResource("group")
+text = "Medium"
+alignment = 0
+
+[node name="HardRow" type="HBoxContainer" parent="Background/Margin/VBox/Rows"]
+layout_mode = 2
+
+[node name="Icon" type="Label" parent="Background/Margin/VBox/Rows/HardRow"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+text = "/"
+horizontal_alignment = 1
+
+[node name="HardButton" type="Button" parent="Background/Margin/VBox/Rows/HardRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.95, 0.9, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0.9, 0.8, 1)
+theme_override_styles/focus = SubResource("focus")
+theme_override_styles/hover_pressed = SubResource("pressed")
+theme_override_styles/hover = SubResource("empty")
+theme_override_styles/pressed = SubResource("pressed")
+theme_override_styles/normal = SubResource("empty")
+toggle_mode = true
+button_group = SubResource("group")
+text = "Hard"
+alignment = 0
+
+[node name="TitleBar" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 30.0
+offset_right = -30.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("title")
+
+[node name="Label" type="Label" parent="TitleBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.9, 0.8, 1)
+text = "MAP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActionFrame" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -44.0
+offset_right = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("escframe")
+
+[node name="ActionButton" type="Button" parent="ActionFrame"]
+layout_mode = 2
+theme_override_styles/hover = SubResource("eschover")
+theme_override_styles/pressed = SubResource("eschover")
+theme_override_styles/normal = SubResource("escnormal")
+text = "escape"

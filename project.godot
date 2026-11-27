@@ -15,6 +15,10 @@ run/main_scene="uid://blpd30li15upp"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://Custom assets/icon.svg"
 
+[autoload]
+
+GameSettings="*uid://clnqjyys6g6q6"
+
 [display]
 
 window/stretch/mode="canvas_items"

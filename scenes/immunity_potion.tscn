@@ -28,7 +28,7 @@ scale = Vector2(0.1875, 0.1875)
 texture = ExtResource("3_u6qd7")
 
 [node name="Effect" type="Timer" parent="." unique_id=1865525326]
-wait_time = 20.0
+wait_time = 15.0
 
 [node name="PickupArea" type="Area2D" parent="." unique_id=1702460942]
 

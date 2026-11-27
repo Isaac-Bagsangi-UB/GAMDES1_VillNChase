@@ -1,45 +1,271 @@
 [gd_scene format=3 uid="uid://cwqkfld1er6xh"]
 
 [ext_resource type="Script" uid="uid://bk8cby40vstga" path="res://codes/pause_menu.gd" id="1_n87rw"]
+[ext_resource type="Script" uid="uid://bxkhud8qngy8b" path="res://codes/Pmenu.gd" id="2_7l7mv"]
+[ext_resource type="Texture2D" uid="uid://df83ii23r7jfy" path="res://Custom assets/Button.png" id="2_myx47"]
+[ext_resource type="Texture2D" uid="uid://ctwxmmccihteo" path="res://Custom assets/Button Hover.png" id="3_5d2l8"]
+[ext_resource type="PackedScene" uid="uid://1xbcnhb6qyal" path="res://scenes/volume.tscn" id="3_v4r4p"]
+[ext_resource type="Texture2D" uid="uid://b68h5htm3g20d" path="res://Custom assets/main_menu_text.png" id="4_5d2l8"]
+[ext_resource type="Texture2D" uid="uid://b8lf7ygx6jc20" path="res://Custom assets/restart_text.png" id="5_knqa7"]
+[ext_resource type="PackedScene" uid="uid://54hm0itp47l0" path="res://scenes/fullscreen_button.tscn" id="7_1s2dm"]
+[ext_resource type="Texture2D" uid="uid://c8ex77y7kop5i" path="res://Custom assets/continue_text.png" id="8_88e76"]
+[ext_resource type="Texture2D" uid="uid://oo488hatjn46" path="res://Custom assets/paused_icon.png" id="9_1rgno"]
+[ext_resource type="Texture2D" uid="uid://c1hljh8gyfxj3" path="res://Custom assets/no.png" id="10_71k7c"]
+[ext_resource type="Script" uid="uid://cgx62k4befjqt" path="res://codes/confirmation.gd" id="10_ofnjo"]
+[ext_resource type="Texture2D" uid="uid://ds5dm24hia0y4" path="res://Custom assets/yes.png" id="11_cmnsq"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_h3dff"]
-font_size = 50
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knqa7"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.3, 0.2, 0.14, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=812656376]
 process_mode = 3
 script = ExtResource("1_n87rw")
 
-[node name="Menu" type="VBoxContainer" parent="." unique_id=1662248437]
+[node name="Menu" type="Control" parent="." unique_id=776121284]
 visible = false
+custom_minimum_size = Vector2(200, 90)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_7l7mv")
+
+[node name="ColorRect" type="ColorRect" parent="Menu" unique_id=655296671]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16856287, 0.16856287, 0.16856287, 0.5686275)
+
+[node name="Continue" type="TextureButton" parent="Menu" unique_id=2030591744]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -144.5
+offset_top = -394.0
+offset_right = 145.5
+offset_bottom = -317.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("2_myx47")
+texture_hover = ExtResource("3_5d2l8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Menu/Continue" unique_id=486959615]
+position = Vector2(145.99998, 37.00001)
+scale = Vector2(0.6685238, 0.5454552)
+texture = ExtResource("8_88e76")
+
+[node name="Restart" type="TextureButton" parent="Menu" unique_id=400156482]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -303.0
+offset_right = 146.5
+offset_bottom = -226.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("2_myx47")
+texture_hover = ExtResource("3_5d2l8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Menu/Restart" unique_id=554529049]
+position = Vector2(145.99998, 37.00001)
+scale = Vector2(0.6685238, 0.5454552)
+texture = ExtResource("5_knqa7")
+
+[node name="volume" parent="Menu" unique_id=1820142734 instance=ExtResource("3_v4r4p")]
+layout_mode = 1
+offset_left = -555.5
+offset_top = -306.0
+offset_right = -470.5
+offset_bottom = -231.0
+
+[node name="fullscreen_button" parent="Menu" unique_id=990868800 instance=ExtResource("7_1s2dm")]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -445.0
+offset_top = -305.0
+offset_right = -360.0
+offset_bottom = -231.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
 
-[node name="PausedLabel" type="Label" parent="Menu" unique_id=317640648]
-layout_mode = 2
-text = "Paused"
-label_settings = SubResource("LabelSettings_h3dff")
+[node name="PausedLabel" type="TextureRect" parent="Menu" unique_id=1193922502]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -220.5
+offset_top = 28.0
+offset_right = 220.5
+offset_bottom = 106.0
+grow_horizontal = 2
+texture = ExtResource("9_1rgno")
+
+[node name="toMain" type="TextureButton" parent="Menu" unique_id=1573257036]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -93.0
+offset_right = 145.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("2_myx47")
+texture_hover = ExtResource("3_5d2l8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Menu/toMain" unique_id=466049183]
+position = Vector2(145.99998, 37.00001)
+scale = Vector2(0.6685238, 0.5454552)
+texture = ExtResource("4_5d2l8")
+
+[node name="Confirmation" type="Control" parent="Menu" unique_id=877338357]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -154.0
+offset_right = 146.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_ofnjo")
+
+[node name="dark_effect" type="ColorRect" parent="Menu/Confirmation" unique_id=2081468954]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -431.0
+offset_top = -170.0
+offset_right = 429.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.85490197)
+
+[node name="box" type="ColorRect" parent="Menu/Confirmation" unique_id=433766018]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.36078432, 0.23921569, 0.16078432, 1)
+
+[node name="Title" type="Label" parent="Menu/Confirmation" unique_id=662460143]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 260.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.95, 0.9, 0.8, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_knqa7")
+text = "ARE YOU SURE?
+(Head to main menu)"
 horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="Continue" type="Button" parent="Menu" unique_id=1425199835]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "CONTINUE"
+[node name="no" type="TextureButton" parent="Menu/Confirmation" unique_id=1402068630]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.75
+offset_top = -30.75
+offset_right = 126.75
+offset_bottom = 30.75
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("2_myx47")
+texture_hover = ExtResource("3_5d2l8")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Restart" type="Button" parent="Menu" unique_id=332804562]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "RESTART"
+[node name="Sprite2D" type="Sprite2D" parent="Menu/Confirmation/no" unique_id=318281399]
+position = Vector2(128.99997, 31.000011)
+scale = Vector2(0.61791044, 0.5454552)
+texture = ExtResource("10_71k7c")
+
+[node name="yes" type="TextureButton" parent="Menu/Confirmation" unique_id=1946877726]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -127.0
+offset_top = -76.0
+offset_right = 126.5
+offset_bottom = -14.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("2_myx47")
+texture_hover = ExtResource("3_5d2l8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Menu/Confirmation/yes" unique_id=1922023408]
+position = Vector2(128.99997, 31.000011)
+scale = Vector2(0.61791044, 0.5454552)
+texture = ExtResource("11_cmnsq")
 
 [connection signal="pressed" from="Menu/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Menu/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Menu/toMain" to="Menu" method="_on_to_main_pressed"]
+[connection signal="pressed" from="Menu/Confirmation/no" to="Menu" method="_on_no_pressed"]
+[connection signal="pressed" from="Menu/Confirmation/yes" to="Menu/Confirmation" method="_on_yes_pressed"]
