@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dwad3ucws8jw5"]
+
+[ext_resource type="Script" uid="uid://hn3qu53u3ps7" path="res://codes/repair_kit.gd" id="1_gb01j"]
+[ext_resource type="Texture2D" uid="uid://bjt41serrmpio" path="res://Custom assets/tools.png" id="2_op20g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(29, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8on1t"]
+size = Vector2(40, 40)
+
+[node name="repair_kit" type="CharacterBody2D" unique_id=574852080]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_gb01j")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1869834002]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1207551048]
+position = Vector2(0.99999976, 1.0000008)
+scale = Vector2(0.0625, 0.054687504)
+texture = ExtResource("2_op20g")
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=618859569]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=1179798172]
+shape = SubResource("RectangleShape2D_8on1t")
+
+[connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]

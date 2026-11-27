@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://7i6upxxx1wob"]
+
+[ext_resource type="Script" uid="uid://bbycb6w8wruqg" path="res://codes/level_select.gd" id="1_3shnc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_64kqf"]
+font_size = 50
+
+[node name="Level_Select" type="Control" unique_id=205229012]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3shnc")
+
+[node name="Title" type="Label" parent="." unique_id=1175906064]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 220.0
+grow_horizontal = 2
+text = "Level Select
+"
+label_settings = SubResource("LabelSettings_64kqf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tutorial" type="Button" parent="." unique_id=1056710796]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -127.0
+offset_right = 99.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Tutorial"
+
+[node name="map_a" type="Button" parent="." unique_id=746762080]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.5
+offset_top = -38.5
+offset_right = 98.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "map_a"
+
+[node name="main menu" type="Button" parent="." unique_id=1216051840]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 272.0
+offset_top = 223.0
+offset_right = 552.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"
+
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="map_a" to="." method="_on_map_a_pressed"]
+[connection signal="pressed" from="main menu" to="." method="_on_main_menu_pressed"]

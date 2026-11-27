@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b41b6u5w1xfsw"]
+
+[ext_resource type="Script" uid="uid://tpldhpxp0kqb" path="res://codes/buff_police.gd" id="1_83hvj"]
+[ext_resource type="Texture2D" uid="uid://bcpwt01jng37" path="res://Custom assets/police stand.png" id="2_4j2qx"]
+[ext_resource type="Texture2D" uid="uid://bhlmm258adw7q" path="res://Custom assets/police walk.png" id="3_4le6t"]
+[ext_resource type="Texture2D" uid="uid://cfw865rvtv246" path="res://Custom assets/police dead.png" id="4_4j2qx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uqdht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4j2qx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4le6t")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4j2qx")
+}],
+"loop": 1,
+"name": &"knocked_out",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc7sy"]
+size = Vector2(15.333334, 26.666666)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(12.666667, 26.333332)
+
+[node name="Buff_Police" type="CharacterBody2D" unique_id=196719572]
+position = Vector2(4, 0)
+scale = Vector2(3, 3)
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_83hvj")
+max_health = 2
+SPEED = 75.0
+health = 2
+komsg = "buff police got knocked out"
+awakemsg = "buff police is awake"
+damage = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1349167258]
+position = Vector2(-4.7683716e-07, -1.1920929e-07)
+scale = Vector2(0.29500002, 0.27983335)
+sprite_frames = SubResource("SpriteFrames_uqdht")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1956074689]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=40299404]
+shape = SubResource("RectangleShape2D_cc7sy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1958652111]
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1702494426]
+position = Vector2(6.6666665, -8)
+target_position = Vector2(0, 22)
+
+[node name="KOTimer" type="Timer" parent="." unique_id=236950928]
+wait_time = 90.0
+
+[connection signal="body_entered" from="Hitbox" to="Hitbox" method="_on_body_entered"]
+[connection signal="timeout" from="KOTimer" to="." method="_on_ko_timer_timeout"]

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cuv2l7sk80jiw"]
+
+[ext_resource type="Script" uid="uid://lqgoi8407sp3" path="res://codes/exit.gd" id="1_c7mer"]
+[ext_resource type="Texture2D" uid="uid://b6ebf718h2jbe" path="res://Custom assets/door.png" id="2_c7mer"]
+[ext_resource type="AudioStream" uid="uid://cg8jrpm8e4y6d" path="res://Assets/Final/GameCleared.wav" id="8_rtnw0"]
+[ext_resource type="AudioStream" uid="uid://byj6nl5wmcxqk" path="res://Assets/Final/DoorLocked.mp3" id="9_doorlocked"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(48, 75.5)
+
+[node name="Exit" type="Area2D" unique_id=1232129892]
+script = ExtResource("1_c7mer")
+metadata/_edit_group_ = true
+
+[node name="GameCleared" type="AudioStreamPlayer" parent="." unique_id=18403787]
+stream = ExtResource("8_rtnw0")
+
+[node name="DoorLocked" type="AudioStreamPlayer" parent="." unique_id=1717926297]
+stream = ExtResource("9_doorlocked")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=535870106]
+position = Vector2(-0.5000012, -0.5000038)
+scale = Vector2(0.19722223, 0.22500004)
+texture = ExtResource("2_c7mer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1341356599]
+position = Vector2(0, -0.25)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="state" type="Label" parent="." unique_id=1486258376]
+visible = false
+offset_left = -28.0
+offset_top = -59.0
+offset_right = 27.0
+offset_bottom = -36.0
+text = "Locked"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

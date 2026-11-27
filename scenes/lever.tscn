@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bw1187jx6riia"]
+
+[ext_resource type="Script" uid="uid://dc0awnn1cxwco" path="res://codes/lever.gd" id="1_qxmkn"]
+[ext_resource type="AudioStream" uid="uid://b0eokf3nm626" path="res://Assets/Final/UnlockDoor.wav" id="2_8di2w"]
+[ext_resource type="Texture2D" uid="uid://c88vic3b84u6k" path="res://Custom assets/LeverOff.png" id="3_qxmkn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2427a"]
+size = Vector2(33, 31)
+
+[node name="lever" type="Area2D" unique_id=1165582256]
+script = ExtResource("1_qxmkn")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1221921250]
+shape = SubResource("RectangleShape2D_2427a")
+
+[node name="UnlockDoor" type="AudioStreamPlayer" parent="." unique_id=504930481]
+stream = ExtResource("2_8di2w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1435143783]
+position = Vector2(7.1525574e-07, 9.536743e-07)
+scale = Vector2(0.30357143, 0.32)
+texture = ExtResource("3_qxmkn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

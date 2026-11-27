@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cb0kri3uxrio3"]
+
+[ext_resource type="Script" uid="uid://bcvon0ugucg51" path="res://codes/gloves.gd" id="1_p187j"]
+[ext_resource type="Texture2D" uid="uid://chjbwgr1o4e1o" path="res://Custom assets/boxing gloves.png" id="2_p187j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(27, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ksya"]
+size = Vector2(40, 40)
+
+[node name="Gloves" type="CharacterBody2D" unique_id=1376615262]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_p187j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1426528704]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1923448827]
+position = Vector2(-9.536743e-07, -9.536743e-07)
+scale = Vector2(0.04347826, 0.078947365)
+texture = ExtResource("2_p187j")
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=1793710261]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=1457481877]
+shape = SubResource("RectangleShape2D_7ksya")
+
+[connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]
+[connection signal="body_exited" from="PickupArea" to="." method="_on_pickup_area_body_exited"]

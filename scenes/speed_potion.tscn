@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://de6ku2n08bmno"]
+
+[ext_resource type="Script" uid="uid://ciu6hr42bm1e1" path="res://codes/speed_potion.gd" id="1_1ktba"]
+[ext_resource type="AudioStream" uid="uid://bwbeqq6xewyky" path="res://Assets/Final/DrinkPotion.wav" id="2_5piv0"]
+[ext_resource type="Texture2D" uid="uid://myb53bop1u35" path="res://Custom assets/Speed Potion.png" id="3_5piv0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(20, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqq54"]
+size = Vector2(40, 40)
+
+[node name="speed_potion" type="CharacterBody2D" unique_id=787222252]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_1ktba")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1455502169]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="DrinkPotion" type="AudioStreamPlayer" parent="." unique_id=1756827872]
+stream = ExtResource("2_5piv0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=198515735]
+position = Vector2(4.7683716e-07, -4.7683716e-07)
+scale = Vector2(0.18750003, 0.1875)
+texture = ExtResource("3_5piv0")
+
+[node name="Effect" type="Timer" parent="." unique_id=1194225090]
+wait_time = 5.0
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=433829869]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=213435206]
+shape = SubResource("RectangleShape2D_sqq54")

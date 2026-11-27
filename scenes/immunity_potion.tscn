@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bp4yetgaw0p5l"]
+
+[ext_resource type="Script" uid="uid://chaqhyrm7xn4r" path="res://codes/immunity_potion.gd" id="1_u6qd7"]
+[ext_resource type="AudioStream" uid="uid://bwbeqq6xewyky" path="res://Assets/Final/DrinkPotion.wav" id="2_cekar"]
+[ext_resource type="Texture2D" uid="uid://cne3lwufhbjql" path="res://Custom assets/Immunity Potion.png" id="3_u6qd7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amj32"]
+size = Vector2(20, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqq54"]
+size = Vector2(40, 40)
+
+[node name="immunity_potion" type="CharacterBody2D" unique_id=237479320]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_u6qd7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1871137714]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_amj32")
+
+[node name="DrinkPotion" type="AudioStreamPlayer" parent="." unique_id=773446599]
+stream = ExtResource("2_cekar")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=198515735]
+position = Vector2(-4.7683716e-07, -4.7683716e-07)
+scale = Vector2(0.1875, 0.1875)
+texture = ExtResource("3_u6qd7")
+
+[node name="Effect" type="Timer" parent="." unique_id=1865525326]
+wait_time = 20.0
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=1702460942]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=213435206]
+shape = SubResource("RectangleShape2D_sqq54")
